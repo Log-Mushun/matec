@@ -20,7 +20,7 @@ const Home = () => {
     <div className='h-full'>
       {/* text */}
       <div className='w-full h-full bg-gradient-radial-a'>
-        <div className='text-center flex flex-row justify-between pt-[21rem] h-full container mx-auto'>
+        <div className='text-center flex flex-row justify-between items-end pb-10 h-full container mx-auto'>
           {/* suitcase */}
           <motion.div
             className='z-10 flex items-center flex-col'
