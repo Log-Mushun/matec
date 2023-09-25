@@ -56,7 +56,7 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className='w-[1200px] h-full absolute right-0 bottom-0'>
+      <div className='w-full h-full absolute right-0 bottom-0'>
         {/* particles */}
         <ParticlesContainer />
       </div>
