@@ -22,8 +22,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#131424',
-        secondary: '#393A47',
+        primary: '#72B5DF',
+        secondary: '#003B71',
         accent: '#F13024',
       },
       backgroundImage: {
@@ -31,6 +31,8 @@ module.exports = {
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
+        'gradient-radial-a': 'radial-gradient(at right bottom, #72B5DF, #FFFFFF 70%, #72B5DF)',
+        'gradient-radial-b': 'radial-gradient(at right top, #003b71 20%, #72B5DF, #003b71 80%)',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',

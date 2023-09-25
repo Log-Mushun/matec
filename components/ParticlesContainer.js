@@ -12,7 +12,7 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className='w-full h-full absolute translate-z-0'
+      className='w-[30%] h-full absolute translate-z-0 mix-blend-multiply z-0'
       id='tsparticles'
       init={particlesInit}
       loaded={particlesLoaded}
@@ -41,33 +41,33 @@ const ParticlesContainer = () => {
               quantity: 90,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
           },
         },
         particles: {
           color: {
-            value: '#e68e2e',
+            value: '#72b5df',
           },
           links: {
-            color: '#f5d393',
+            color: '#72b5df',
             distance: 150,
             enable: true,
             opacity: 0.5,
-            width: 1,
+            width: 3,
           },
           collisions: {
             enable: true,
           },
           move: {
-            directions: 'none',
+            directions: 'bottom',
             enable: true,
             outModes: {
               default: 'bounce',
             },
             random: false,
-            speed: 1,
+            speed: 0.5,
             straight: false,
           },
           number: {
@@ -75,16 +75,16 @@ const ParticlesContainer = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 100,
           },
           opacity: {
-            value: 0.5,
+            value: 1,
           },
           shape: {
             type: 'circle',
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 2, max: 7 },
           },
         },
         detectRetina: true,
