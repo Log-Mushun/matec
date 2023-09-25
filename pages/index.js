@@ -20,46 +20,43 @@ const Home = () => {
     <div className='h-full'>
       {/* text */}
       <div className='w-full h-full bg-gradient-radial-a'>
-        <div className='text-center flex flex-row justify-center xl:pt-[21rem] xl:text-left h-full container mx-auto'>
+        <div className='text-center flex flex-row justify-between pt-[21rem] h-full container mx-auto'>
           {/* suitcase */}
           <motion.div
-            className='pr-20 z-10'
+            className='z-10 flex items-center flex-col'
             variants={fadeIn('down', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
           >
-            <FaSuitcaseRolling className='text-[#003d71]  w-36 h-36' />
+            <FaSuitcaseRolling className='text-[#003d71]  lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12' />
             <h1 className='text-[#003d71] text-center pt-5'>Aeropuertos</h1>
           </motion.div>
           {/* papers */}
           <motion.div
-            className='pr-20 z-10'
+            className='z-10 flex items-center flex-col'
             variants={fadeIn('down', 0.4)}
             initial='hidden'
             animate='show'
             exit='hidden'
           >
-            <GiCardboardBoxClosed className='text-[#003d71]  w-36 h-36' />
+            <GiCardboardBoxClosed className='text-[#003d71] lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12' />
             <h1 className='text-[#003d71] text-center pt-5'>Papel y carton</h1>
           </motion.div>
           {/* papers */}
           <motion.div
-            className='z-10'
+            className='z-10 flex items-center flex-col'
             variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden'
           >
-            <FaBoxesPacking className='text-[#003d71]  w-36 h-36' />
-            <h1 className='text-[#003d71] text-center pt-5'>Logistica</h1>
+            <FaBoxesPacking className='text-[#003d71]  lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12' />
+            <h1 className='text-[#003d71] text-center pt-5 text-sm'>Logistica</h1>
           </motion.div>
         </div>
       </div>
-      {/* image */}
       <div className='w-[1200px] h-full absolute right-0 bottom-0'>
-        {/* bg img */}
-        <div className='bg-none xl:bg-transparent xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div>
         {/* particles */}
         <ParticlesContainer />
       </div>
