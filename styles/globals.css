@@ -18,6 +18,10 @@
   color: #f13024;
 }
 
+.hdn:hover{
+  display: block;
+}
+
 @font-face {
   font-family: 'FuturaHvBTHeavy';
   src: url('/fonts/Futura_Hv_BT_Heavy.ttf') format('truetype');

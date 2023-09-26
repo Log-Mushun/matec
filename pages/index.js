@@ -1,5 +1,6 @@
 // next image
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { FaSuitcaseRolling } from 'react-icons/fa'
 import { GiCardboardBoxClosed } from 'react-icons/gi'
@@ -29,8 +30,14 @@ const Home = () => {
             animate='show'
             exit='hidden'
           >
-            <FaSuitcaseRolling className='text-[#003d71]  lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12' />
-            <h1 className='text-[#003d71] text-center pt-5'>Aeropuertos</h1>
+            <Link
+              href='/airports'
+            >
+              <div className='bg-transparent hover:bg-hoverbg hover:bg-cover hover:bg-no-repeat h-[12.5rem] w-[12rem] flex justify-end flex-col items-center'>
+                <FaSuitcaseRolling className='text-[#003d71]  lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12 z-10' />
+                <h1 className='text-[#003d71] text-center pt-5 z-10 text-2xl'>Aeropuertos</h1>
+              </div>
+            </Link>
           </motion.div>
           {/* papers */}
           <motion.div
@@ -41,7 +48,7 @@ const Home = () => {
             exit='hidden'
           >
             <GiCardboardBoxClosed className='text-[#003d71] lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12' />
-            <h1 className='text-[#003d71] text-center pt-5'>Papel y carton</h1>
+            <h1 className='text-[#003d71] text-center pt-5 text-2xl'>Papel y carton</h1>
           </motion.div>
           {/* papers */}
           <motion.div
@@ -52,7 +59,7 @@ const Home = () => {
             exit='hidden'
           >
             <FaBoxesPacking className='text-[#003d71]  lg:w-36 lg:h-36 md:w-20 md:h-20 sm:w-12 sm:h-12' />
-            <h1 className='text-[#003d71] text-center pt-5 text-sm'>Logistica</h1>
+            <h1 className='text-[#003d71] text-center pt-5 text-2xl'>Logistica</h1>
           </motion.div>
         </div>
       </div>
