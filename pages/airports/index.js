@@ -1,6 +1,6 @@
 'use client'
 
-import AirportsComp from "../../components/Experiences/Airports/AirportsComp";
+import AirportsComp from "../../components/Experiences/airports/AirportsComp"
 import DriverInsights from "../../components/Experiences/airports/DriverInsights";
 import DriverOne from "../../components/Experiences/airports/DriverOne";
 import HeaderExperience from "../../components/Headers/HeaderExperience";
