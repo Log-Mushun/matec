@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 function DrawerAirports() {
     const transitions = useTransition(show, null, {
@@ -10,16 +11,16 @@ function DrawerAirports() {
     <div>{transitions?.map(
         ({ item, key, props }) =>
           item && (
-            <animated.div
+            <motion.div
               key={key}
               style={{ opacity: props.opacity }}
               className="overlay"
             >
-              <animated.div style={{ width: props.width }} className="drawer">
+              <motion.div style={{ width: props.width }} className="drawer">
                 DRIVERS
-              </animated.div>
+              </motion.div>
               <div className="fill" onClick={() => setShow(false)} />
-            </animated.div>
+            </motion.div>
           )
       )}</div>
   )
