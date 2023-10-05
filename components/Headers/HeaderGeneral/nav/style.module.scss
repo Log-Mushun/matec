@@ -1,0 +1,28 @@
+.nav{
+   overflow: hidden;
+   background: linear-gradient(to bottom, #3476A5, #134579);
+   height: 100%;
+
+
+   .wrapper{
+        display: flex;
+        height: 100%;
+
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .nav{
+        .wrapper{
+            justify-content: space-between;
+            
+        }
+    }
+}

@@ -2,18 +2,19 @@ import { Particles } from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import React, { useCallback } from 'react';
 
-const ParticlesContainer = () => {
+const ParticlesContainer = (props) => {
   //  init
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async () => {}, []);
+  const particlesLoaded = useCallback(async () => { }, []);
 
   return (
     <Particles
-      className='w-[30%] h-full absolute left-0 bottom-0 mix-blend-multiply z-0 flex items-start'
-      id='tsparticles'
+      key={props.number}
+      id={`tspaticles${props.number}`}
+      className='w-[100vh] h-full absolute left-0 bottom-0  flex items-start'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
@@ -31,8 +32,7 @@ const ParticlesContainer = () => {
               mode: 'push',
             },
             onHover: {
-              enable: true,
-              mode: 'repulse',
+              enable: false,
             },
             resize: true,
           },
@@ -40,22 +40,18 @@ const ParticlesContainer = () => {
             push: {
               quantity: 90,
             },
-            repulse: {
-              distance: 100,
-              duration: 0.4,
-            },
           },
         },
         particles: {
           color: {
-            value: '#72b5df',
+            value: '#ffffff',
           },
           links: {
-            color: '#72b5df',
+            color: '#ffffff',
             distance: 150,
             enable: true,
-            opacity: 0.5,
-            width: 3,
+            opacity: 0.8,
+            width: 1,
           },
           collisions: {
             enable: true,
@@ -75,7 +71,7 @@ const ParticlesContainer = () => {
               enable: true,
               area: 800,
             },
-            value: 100,
+            value: 150,
           },
           opacity: {
             value: 1,
@@ -84,7 +80,7 @@ const ParticlesContainer = () => {
             type: 'circle',
           },
           size: {
-            value: { min: 2, max: 7 },
+            value: { min: 2, max: 5 },
           },
         },
         detectRetina: true,
