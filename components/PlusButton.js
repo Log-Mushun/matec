@@ -40,7 +40,7 @@ const PlusButton = (props) => {
         gsap.to(buttonTitle2, { opacity: 0, duration: 0.5 });
       }
 
-      
+
       if (props.number == 3) {
         // gsap.to(driverOneFunctions, { opacity: 0, duration: 0.5 });
         gsap.to(buttonTitle3, { opacity: 0, duration: 0.5 });
@@ -91,7 +91,7 @@ const PlusButton = (props) => {
 
     driverInsights = document.getElementById("driver-insights");
     buttonTitle2 = document.getElementById("button-title2");
-    
+
     driverOneFunctions = document.getElementById("driverone-functions");
     buttonTitle3 = document.getElementById("button-title3");
   }
@@ -105,28 +105,33 @@ const PlusButton = (props) => {
   }, [clicked]);
 
   return (
-    <div key={props.number}>
-      <div className="Flex flex-row">
-        <div
-          className={`flex items-center justify-center w-24 h-24 absolute ${props.right} ${props.top} cursor-pointer z-1 opacity-0 plus-button${props.number}`}
-          id={`plus-button${props.number}`}
-          onClick={handleClick}
-          key={props.number}
-        >
-          <Image
-            src={"/circle_outside_plus.svg"}
-            width={200}
-            height={200}
-            alt="a rotating circle"
-            className="relative animate-spin"
-          />
-          <Image
-            src={"/icon_button_driverv2.svg"}
-            width={50}
-            height={50}
-            alt="a plus sign, it looks like a vertical cross"
-            className="absolute"
-          />
+    <div key={props.number} className="w-full h-full">
+      <div className={`absolute w-full h-full ${props.right} ${props.top}`}>
+        <div className="flex flex-row z-1 items-center">  {/* Updated this line */}
+          <div
+            className={`flex items-center justify-center w-24 h-24 relative cursor-pointer z-1 opacity-0 plus-button${props.number}`}
+            id={`plus-button${props.number}`}
+            onClick={handleClick}
+            key={props.number}
+          >
+            <Image
+              src={"/circle_outside_plus.svg"}
+              width={200}
+              height={200}
+              alt="a rotating circle"
+              className="relative animate-spin"
+            />
+            <Image
+              src={"/icon_button_driverv2.svg"}
+              width={50}
+              height={50}
+              alt="matec logo, it represents two wings"
+              className="absolute"
+            />
+          </div>
+          <h2 className={`z-[200] relative ml-4 ${props.titlesize}`}>
+            {props.title}
+          </h2>
         </div>
       </div>
     </div>

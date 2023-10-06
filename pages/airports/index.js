@@ -115,7 +115,9 @@ export default function Airports() {
             <DriverOne />
             <PlusButton number={1}
               right="left-[17%]"
-              top="top-[15%]" />
+              top="top-[15%]" 
+              title={t('airport-driver1-title')}
+              titlesize='text-[4.5vh]'/>
             <SlidableDriverInfo number={1} 
             title={t('airport-driver1-title-sidebar')}
             text={t('airport-driver1-text-sidebar')}/>
@@ -128,10 +130,11 @@ export default function Airports() {
           <SlidableController>
             <DriverInsights />
             <PlusButton number={2}
-              right="right-[51%]"
-              top="bottom-[20%]"
+              right="right-[-50%]"
+              top="top-[65%]"
+              title={t('airport-driver1-title2')}
+              titlesize='text-[5vh]'
             />
-            <h1 className="absolute right-[15%] bottom-[25%] z-[11] text-4xl button-title2 opacity-0" id="button-title2">{t('airport-driver1-title2')}</h1>
             <SlidableDriverInfo number={2} 
             title={t('airport-slidable-title1')}
             text={t('airport-slidable-texto1')}
@@ -143,8 +146,9 @@ export default function Airports() {
             <DriverOneFunctions />
             <PlusButton number={3}
               right="left-[9%]"
-              top="top-[20%]" />
-            <h1 className="absolute left-[18%] top-[25%] z-[11] text-4xl opacity-0 button-title3" id="button-title3">{t("airport-driver2-title")}</h1>
+              top="top-[20%]" 
+              title={t("airport-driver2-title")}
+              titlesize='text-[4.5vh]'/>
             <SlidableDriverInfo number={3}   title={t('airport-slidable-title3')}
             text={t('airport-slidable-texto3')}/>
           </SlidableController>
