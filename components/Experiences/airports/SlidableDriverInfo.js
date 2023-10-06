@@ -75,7 +75,7 @@ const SlidableDriverInfo = (props) => {
           width={20}
           height={20}
           id={`cross-close${props.number}`}
-          alt="a plus sign, it looks like a vertical cross"
+          alt="a close button, it's a cross"
           className="absolute cursor-pointer rotate-45 top-10 right-10 z-[30]"
           onClick={closeFunction}
         />
@@ -89,29 +89,78 @@ const SlidableDriverInfo = (props) => {
             <h1 className='text-2xl pt-16 pl-10'>
               {props.title}
             </h1>
-            <Image
-              src={'/images/slidable1.png'}
-              width={200}
-              height={100}
-              className='pt-5 flex self-center justify-self-center'
-            />
-            <div>
-              <p className='pt-3 pl-3 pr-3 text-xs'>
-                {props.text}
-              </p>
-            </div>
-            <div>
-              <iframe
-                width="300"
-                height="160"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-                allowfullscreen
-                className='pl-14 absolute bottom-0 flex self-center justify-self-center'
-              ></iframe>
-            </div>
+            {props.number ==1 && (
+              <>              
+              <Image
+                src={'/images/slidable_img1.png'}
+                width={270}
+                height={200}
+                className='pt-5 flex self-center justify-self-center'
+              />
+              <div>
+                <p className='pt-3 pl-3 pr-3 text-xs'>
+                  {props.text}
+                </p>
+              </div>
+              <div>
+                <iframe
+                  width="400"
+                  height="160"
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
+                  allowfullscreen
+                  className='absolute bottom-[9%] flex self-center justify-self-center'
+                ></iframe>
+              </div>
+              </>
+            )
+            }
+             {props.number ==2 && (
+              <>              
+              <Image
+                src={'/images/ATR-01.png'}
+                width={320}
+                height={200}
+                className='pt-5 flex self-center justify-self-center'
+              />
+              <div>
+                <p className='pt-3 pl-3 pr-3 text-xs'>
+                  {props.text}
+                </p>
+              </div>
+              <Image
+                src={'/images/CBRA-01.png'}
+                width={320}
+                height={250}
+                className='pt-5 flex self-center justify-self-center'
+              />
+              </>
+            )
+            }
+            {props.number ==3 && (
+              <>              
+              <Image
+                src={'/images/CROSSBELTSORT-01.png'}
+                width={320}
+                height={250}
+                className='pt-5 flex self-center justify-self-center'
+              />
+              <div>
+                <p className='pt-3 pl-3 pr-3 text-xs'>
+                  {props.text}
+                </p>
+              </div>
+              <Image
+                src={'/images/CROSSOVER-01.png'}
+                width={320}
+                height={250}
+                className='pt-5 flex self-center justify-self-center'
+              />
+              </>
+            )
+            }
           </div>
         </div>
       </div>

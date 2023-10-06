@@ -30,12 +30,12 @@ const VideoComponent = ({ videoIndex }) => {
   };
 
   return (
-    <div className='relative'>
+    <div>
       <motion.video
         autoPlay
         loop
         muted
-        className="h-screen absolute left-0 top-0 z-[11]"
+        className="h-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
         ref={videoRef}
         onCanPlay={handleLoad}
         onLoadedMetadata={handleLoad}
