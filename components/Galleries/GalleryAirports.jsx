@@ -11,7 +11,7 @@ import styled from "styled-components";
 const Section = styled.section`
 height: 100vh;
 position: relative;
-  z-index: 11;
+  z-index: 12;
   background-color: transparent;
 `;
 

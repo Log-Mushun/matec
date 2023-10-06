@@ -15,6 +15,7 @@ const SlidableDriverInfo = (props) => {
   var crossClose;
   var driverInsights;
   var headerExperience;
+  var buttonTitle1;
   var buttonTitle2;
   var buttonTitle3;
   var driverOneFunctions;
@@ -31,6 +32,7 @@ const SlidableDriverInfo = (props) => {
 
       if (props.number == 1) {
         gsap.to(driverOneElement, { x: 0, duration: 0.5 });
+        gsap.to(buttonTitle1, { opacity: 1, duration: 0.5 });
       }
 
       if (props.number == 2) {
@@ -54,7 +56,9 @@ const SlidableDriverInfo = (props) => {
     slidableDriverInfo = document.getElementById(`slidable-driver-info${props.number}`);
     crossClose = document.getElementById(`cross-close${props.number}`);
     headerExperience = document.getElementById("header-experience");
-        
+    
+    buttonTitle1 = document.getElementById("button-title1");    
+
     driverInsights = document.getElementById("driver-insights");
     buttonTitle2 = document.getElementById("button-title2");
     

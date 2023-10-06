@@ -15,6 +15,7 @@ const PlusButton = (props) => {
   var crossClose;
   var driverInsights;
   var headerExperience;
+  var buttonTitle1;
   var buttonTitle2;
   var buttonTitle3;
   var driverOneFunctions;
@@ -33,6 +34,7 @@ const PlusButton = (props) => {
 
       if (props.number == 1) {
         gsap.to(driverOneElement, { x: -450, duration: 0.5 });
+        gsap.to(buttonTitle1, { opacity: 0, duration: 0.5 });
       }
 
       if (props.number == 2) {
@@ -64,6 +66,7 @@ const PlusButton = (props) => {
 
       if (props.number == 1) {
         gsap.to(driverOneElement, { x: 0, duration: 0.5 });
+        gsap.to(buttonTitle1, { opacity: 1, duration: 0.5 });
       }
 
       if (props.number == 2) {
@@ -88,6 +91,8 @@ const PlusButton = (props) => {
     crossClose = document.getElementById(`cross-close${props.number}`);
     driverInsights = document.getElementById("driver-insights");
     headerExperience = document.getElementById("header-experience");
+
+    buttonTitle1 = document.getElementById("button-title1");
 
     driverInsights = document.getElementById("driver-insights");
     buttonTitle2 = document.getElementById("button-title2");
@@ -129,7 +134,7 @@ const PlusButton = (props) => {
               className="absolute"
             />
           </div>
-          <h2 className={`z-[200] relative ml-4 ${props.titlesize}`}>
+          <h2 className={`z-[200] relative ml-4 ${props.titlesize}`} id={`button-title${props.number}`}>
             {props.title}
           </h2>
         </div>
