@@ -14,7 +14,7 @@ const ParticlesContainer = (props) => {
     <Particles
       key={props.number}
       id={`tspaticles${props.number}`}
-      className='w-[100vh] h-full absolute left-0 bottom-0  flex items-start'
+      className='w-[100%] h-full absolute left-0 bottom-0  flex items-start'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
