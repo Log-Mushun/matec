@@ -91,7 +91,7 @@ const DriverInsights = () => {
         </div>
       </div>
       <div className='w-screen h-screen relative'>
-        <VideoComponent videoIndex={index} />
+        <VideoComponent videoIndex={index} isFunctions={1}/>
       </div>
     </div>
     </I18nextProvider>

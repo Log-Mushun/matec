@@ -1,4 +1,5 @@
 import FunctionsText from "./FunctionsText";
+import VideoComponent from "@/components/VideoComponent";
 
 const DriverOneFunctions = () => {
     return(
