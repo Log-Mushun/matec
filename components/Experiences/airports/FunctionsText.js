@@ -18,8 +18,7 @@ const FunctionsText = () => {
 
     return (
         <>
-            <div className='z-[32] relative functions-text flex flex-col justify-center'>
-            <VideoComponent videoIndex={0} isFunctions={2} />
+            <div className='z-[32] relative functions-text flex flex-col justify-center pt-[30%]'>
                 <div className='w-full flex flex-row pl-28'>
                     {buttons.map((button, index) => (
                         <div
