@@ -26,13 +26,20 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import {i18n as i18nfile} from "../../i18n";
 import { subscribeToCustomEvent } from "../../components/Languages/eventService";
+import ModelViewer from "@/components/Experiences/airports/ModelViewer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Airports() {
   const [isWebGiViewerLoaded, setIsWebGiViewerLoaded] = useState(false);
+  const [modelPath, setModelPath] = useState("../BandaV2.glb");
 
   const { t, i18n } = useTranslation();
+
+  const handleChangeModelPath = () => {
+    // Cambiar el path del modelo al hacer clic en el botón
+    setModelPath("../crossbeltsort.glb");
+  };
 
 
   useEffect(() => {
@@ -41,41 +48,7 @@ export default function Airports() {
       setIsWebGiViewerLoaded(true);
       document.body.style.overflowY = 'auto';
     };
-    // const driverOne = document.getElementById('driver-one');
-    // ScrollTrigger.create({
-    //   trigger: driverOne,
-    //   start: "top bottom",
-    //   end: "+=199%",
-    //   onToggle: self => self.isActive && !scrollTween && goToSectionOne()
-    // });
-
-    // let panels = gsap.utils.toArray(".panel"),
-    //   observer = ScrollTrigger.normalizeScroll(true),
-    //   scrollTween;
-
-    // // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
-    // document.addEventListener("touchstart", e => {
-    //   if (scrollTween) {
-    //     e.preventDefault();
-    //     e.stopImmediatePropagation();
-    //   }
-    // }, { capture: true, passive: false })
-
-    // function goToSectionOne() {
-    //   scrollTween = gsap.to(window, {
-    //     scrollTo: { y: innerHeight, autoKill: false },
-    //     onStart: () => {
-    //       document.body.style.overflow = 'hidden';
-    //       observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-    //       observer.enable();
-    //       console.log('start');
-    //     },
-    //     duration: 1,
-    //     onComplete: () => { scrollTween = null; document.body.style.overflow = 'auto'; },
-    //     overwrite: true
-    //   });
-    // }
-
+    
     document.addEventListener('webGiViewerLoaded', handleWebGiViewerLoaded);
 
     return () => {
@@ -103,7 +76,7 @@ export default function Airports() {
       <div className="h-full">
         <ProgressBar />
         <LoadingScreen isVisible={!isWebGiViewerLoaded} />
-        <WebGiViewer />
+        <WebGiViewer modelPath={modelPath}/>
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />
@@ -153,7 +126,9 @@ export default function Airports() {
             text={t('airport-slidable-texto3')}/>
           </SlidableController>
         </section>
-        {/* <GuardianConcept /> */}
+        <section className="panel h-full">
+          <ModelViewer changeModel={handleChangeModelPath}/>
+        </section>
         <GalleryAirports/>
       </div>
     </MyContextProvider>
