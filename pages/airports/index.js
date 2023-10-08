@@ -27,6 +27,7 @@ import { I18nextProvider, useTranslation } from "react-i18next";
 import {i18n as i18nfile} from "../../i18n";
 import { subscribeToCustomEvent } from "../../components/Languages/eventService";
 import ModelViewer from "@/components/Experiences/airports/ModelViewer";
+import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -126,10 +127,15 @@ export default function Airports() {
             text={t('airport-slidable-texto3')}/>
           </SlidableController>
         </section>
+      
         <section className="panel h-full">
-          <ModelViewer changeModel={handleChangeModelPath}/>
-        </section>
         <GalleryAirports/>
+        </section>
+        <section className="panel h-[100vh]">
+        
+       <ModelsInteractive/>
+       </section>
+
       </div>
     </MyContextProvider>
   )

@@ -75,7 +75,7 @@ function WebGiViewer({modelPath}) {
     
             const onUpdate = () => {
                 needsUpdate = true;
-                viewer.setDirty();
+                viewer.setDirty(); 
             }
     
             viewer.addEventListener("preFrame", () => {
