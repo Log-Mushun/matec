@@ -29,7 +29,6 @@ import { subscribeToCustomEvent } from "../../components/Languages/eventService"
 import ModelViewer from "@/components/Experiences/airports/ModelViewer";
 import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive";
 import dynamic from 'next/dynamic'
-import NoSSR from "react-no-ssr";
  
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -77,7 +76,6 @@ export default function Airports() {
 
   return (
     <MyContextProvider>
-      <NoSSR>
       <div className="h-full">
         <ProgressBar />
         <LoadingScreen isVisible={!isWebGiViewerLoaded} />
@@ -149,7 +147,6 @@ export default function Airports() {
        </section>
 
       </div>
-      </NoSSR>
     </MyContextProvider>
   )
 }

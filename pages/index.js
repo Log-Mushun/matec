@@ -7,8 +7,6 @@ import { GiCardboardBoxClosed } from 'react-icons/gi'
 import { FaBoxesPacking } from 'react-icons/fa6'
 import { I18nextProvider, useTranslation } from "react-i18next";
 import {i18n as i18nfile} from "../i18n";
-// components
-import NoSSR from 'react-no-ssr'; // Importa react-no-ssr
 
 // framer motion
 import { AnimatePresence, motion } from 'framer-motion';
@@ -68,7 +66,6 @@ const Home = () => {
 
   return (
     <I18nextProvider i18n={i18nfile}>
-      <NoSSR>
 
     <AnimatePresence>
       <motion.div className='h-full'>
@@ -148,7 +145,6 @@ const Home = () => {
         </div>
       </motion.div>
     </AnimatePresence>
-    </NoSSR>
     </I18nextProvider>
 
   );
