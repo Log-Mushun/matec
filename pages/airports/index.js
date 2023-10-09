@@ -24,25 +24,20 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { I18nextProvider, useTranslation } from "react-i18next";
-import {i18n as i18nfile} from "../../i18n";
+import { i18n as i18nfile } from "../../i18n";
 import { subscribeToCustomEvent } from "../../components/Languages/eventService";
 import ModelViewer from "@/components/Experiences/airports/ModelViewer";
 import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive";
 import dynamic from 'next/dynamic'
- 
+import DispelModel from "@/components/Experiences/airports/DispelModel";
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Airports() {
   const [isWebGiViewerLoaded, setIsWebGiViewerLoaded] = useState(false);
-  const containerRef = useRef(null);
 
   const { t, i18n } = useTranslation();
-
-  const handleChangeModelPath = () => {
-    // Cambiar el path del modelo al hacer clic en el botón
-    setModelPath("../crossbeltsort.glb");
-  };
 
 
   useEffect(() => {
@@ -51,7 +46,7 @@ export default function Airports() {
       setIsWebGiViewerLoaded(true);
       document.body.style.overflowY = 'auto';
     };
-    
+
     document.addEventListener('webGiViewerLoaded', handleWebGiViewerLoaded);
 
     return () => {
@@ -79,28 +74,30 @@ export default function Airports() {
       <div className="h-full">
         <ProgressBar />
         <LoadingScreen isVisible={!isWebGiViewerLoaded} />
-        <WebGiViewer/>
+        <WebGiViewer />
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />
         <section className="panel h-full">
           <AirportsComp />
-        </section> 
+        </section>
         <section className="panel h-full">
           <SlidableController>
             <DriverOne />
             <PlusButton number={1}
               right="left-[17%]"
-              top="top-[15%]" 
+              top="top-[15%]"
               title={t('airport-driver1-title')}
-              titlesize='text-[4.5vh]'/>
-            <SlidableDriverInfo number={1} 
-            title={t('airport-driver1-title-sidebar')}
-            text={t('airport-driver1-text-sidebar')}/>
+              titlesize='text-[4.5vh]' />
+            <SlidableDriverInfo number={1}
+              title={t('airport-driver1-title-sidebar')}
+              text={t('airport-driver1-text-sidebar')} 
+              text2={t('airport-driver1-text-sidebar2')}/>
           </SlidableController>
         </section>
         {/*SlidableDriverInfo affects the layout of the next element, so we have to let an empty div here in order to avoid the bug */}
         <div>
+          <DispelModel />
         </div>
         <section className="panel h-full">
           <SlidableController>
@@ -111,40 +108,35 @@ export default function Airports() {
               title={t('airport-driver1-title2')}
               titlesize='text-[5vh]'
             />
-            <SlidableDriverInfo number={2} 
-            title={t('airport-slidable-title1')}
-            text={t('airport-slidable-texto1')}
+            <SlidableDriverInfo number={2}
+              title={t('airport-slidable-title1')}
+              text={t('airport-slidable-texto1')}
+              text2={t('airport-slidable-texto2')}
             />
           </SlidableController>
         </section>
         <>
-        <section className="panel h-full">
-          <SlidableController>
-            <DriverOneFunctions />
-            <PlusButton number={3}
-              right="left-[9%]"
-              top="top-[20%]" 
-              title={t("airport-driver2-title")}
-              titlesize='text-[4.5vh]'/>
-            <SlidableDriverInfo number={3}   title={t('airport-slidable-title3')}
-            text={t('airport-slidable-texto3')}/>
-          </SlidableController>
-        </section>
+          <section className="panel h-full">
+            <SlidableController>
+              <DriverOneFunctions />
+              <PlusButton number={3}
+                right="left-[9%]"
+                top="top-[20%]"
+                title={t("airport-driver2-title")}
+                titlesize='text-[4.5vh]' />
+              <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
+                text={t('airport-slidable-texto3')} 
+                text2={t('airport-slidable-texto4')} />
+            </SlidableController>
+          </section>
         </>
         <section className="panel h-full">
-        <SlidableController>
-
-          <GalleryAirports/>
-          </SlidableController>
-
+          <GuardianConcept/>
+          <ModelsInteractive />
         </section>
         <section className="panel h-full">
-        <SlidableController>
-
-       <ModelsInteractive/>
-       </SlidableController>
-
-       </section>
+          <GalleryAirports />
+        </section>
 
       </div>
     </MyContextProvider>

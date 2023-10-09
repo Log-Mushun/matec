@@ -28,7 +28,7 @@ const SlidableDriverInfo = (props) => {
       gsap.to(plusButton, { opacity: 1, cursor: "pointer", duration: 0.5, delay: 0.4 });
       gsap.to(slidableDriverInfo, { width: 0, duration: 0.5 });
       gsap.to(crossClose, { opacity: 0, cursor: "auto", duration: 0.1 });
-      gsap.to(headerExperience, {zIndex: 200, duration: 0.1 });
+      gsap.to(headerExperience, { zIndex: 200, duration: 0.1 });
 
       if (props.number == 1) {
         gsap.to(driverOneElement, { x: 0, duration: 0.5 });
@@ -56,18 +56,18 @@ const SlidableDriverInfo = (props) => {
     slidableDriverInfo = document.getElementById(`slidable-driver-info${props.number}`);
     crossClose = document.getElementById(`cross-close${props.number}`);
     headerExperience = document.getElementById("header-experience");
-    
-    buttonTitle1 = document.getElementById("button-title1");    
+
+    buttonTitle1 = document.getElementById("button-title1");
 
     driverInsights = document.getElementById("driver-insights");
     buttonTitle2 = document.getElementById("button-title2");
-    
+
     driverOneFunctions = document.getElementById("driverone-functions");
     buttonTitle3 = document.getElementById("button-title3");
   }
 
   return (
-    <div className="bg-[#213541] w-[0%] h-screen right-0 fixed top-0 z-[33]" id={`slidable-driver-info${props.number}`}
+    <div className="bg-[#213541] w-[0%] h-full right-0 fixed top-0 z-[33] overflow-y-auto" id={`slidable-driver-info${props.number}`}
       key={props.number}>
       <div key={props.number}>
         <Image
@@ -81,83 +81,98 @@ const SlidableDriverInfo = (props) => {
         />
       </div>
       <div className='flex flex-row'>
-        <div className='bg-[#021322] w-[20%] h-[100vh] relative'>
-          <ParticlesContainer number={props.number}/>
+        <div className='bg-[#021322] w-[20%] h-[100%] min-h-[150vh] relative flex items-center justify-center'>
+          <ParticlesContainer number={props.number} />
         </div>
-        <div className='relative bg-gradient-to-t from-[#021322] to-[#213541]  h-[100vh] w-[80%]'>
+        <div className='relative bg-gradient-to-t from-[#021322] to-[#213541]  h-[150vh] w-[80%]'>
           <div className='flex flex-col'>
             <h1 className='text-2xl pt-16 pl-10'>
               {props.title}
             </h1>
-            {props.number ==1 && (
-              <>              
-              <Image
-                src={'/images/slidable_img1.png'}
-                width={270}
-                height={200}
-                className='pt-5 flex self-center justify-self-center'
-              />
-              <div>
-                <p className='pt-3 pl-3 pr-3 text-xs'>
-                  {props.text}
-                </p>
-              </div>
-              <div>
-                <iframe
-                  width="400"
-                  height="160"
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
-                  allowfullscreen
-                  className='absolute bottom-[9%] flex self-center justify-self-center'
-                ></iframe>
-              </div>
+            {props.number == 1 && (
+              <>
+                <Image
+                  src={'/images/slidable_img1.png'}
+                  width={270}
+                  height={200}
+                  className='pt-5 flex self-center justify-self-center'
+                />
+                <div>
+                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                    {props.text}
+                  </p>
+                </div>
+                <div>
+                  <iframe
+                    width="370"
+                    height="230"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
+                    allowfullscreen
+                    className='flex self-center justify-self-center'
+                  ></iframe>
+                </div>
+                <div>
+                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                    {props.text2}
+                  </p>
+                </div>
               </>
             )
             }
-             {props.number ==2 && (
-              <>              
-              <Image
-                src={'/images/ATR-01.png'}
-                width={320}
-                height={200}
-                className='pt-5 flex self-center justify-self-center'
-              />
-              <div>
-                <p className='pt-3 pl-3 pr-3 text-xs'>
-                  {props.text}
-                </p>
-              </div>
-              <Image
-                src={'/images/CBRA-01.png'}
-                width={320}
-                height={250}
-                className='pt-5 flex self-center justify-self-center'
-              />
+            {props.number == 2 && (
+              <>
+                <Image
+                  src={'/images/ATR-01.png'}
+                  width={320}
+                  height={200}
+                  className='pt-5 flex self-center justify-self-center'
+                />
+                <div>
+                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                    {props.text}
+                  </p>
+                </div>
+                <Image
+                  src={'/images/CBRA-01.png'}
+                  width={320}
+                  height={250}
+                  className='pt-5 flex self-center justify-self-center'
+                />
+                <div>
+                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                    {props.text2}
+                  </p>
+                </div>
               </>
             )
             }
-            {props.number ==3 && (
-              <>              
-              <Image
-                src={'/images/CROSSBELTSORT-01.png'}
-                width={320}
-                height={250}
-                className='pt-5 flex self-center justify-self-center'
-              />
-              <div>
-                <p className='pt-3 pl-3 pr-3 text-xs'>
-                  {props.text}
-                </p>
-              </div>
-              <Image
-                src={'/images/CROSSOVER-01.png'}
-                width={320}
-                height={250}
-                className='pt-5 flex self-center justify-self-center'
-              />
+            {props.number == 3 && (
+              <>
+                <Image
+                  src={'/images/CROSSBELTSORT-01.png'}
+                  width={320}
+                  height={250}
+                  className='pt-5 flex self-center justify-self-center'
+                />
+                <div>
+                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                    {props.text}
+                  </p>
+                </div>
+                <Image
+                  src={'/images/CROSSOVER-01.png'}
+                  width={320}
+                  height={250}
+                  className='pt-5 flex self-center justify-self-center'
+                />
+                <div>
+                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                    {props.text2}
+                  </p>
+                </div>
               </>
             )
             }

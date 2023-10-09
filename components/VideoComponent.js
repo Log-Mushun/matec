@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const videos = [
-  '/videos/2crossover.mp4',
   '/videos/3atr.mp4',
-  '/videos/4cbra.mp4',
+  '/videos/6mes.mp4',
+  '/videos/7makeup.mp4',
   // ... Añade más URLs de video según sea necesario
 ];
 
