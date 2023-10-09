@@ -32,7 +32,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Airports() {
   const [isWebGiViewerLoaded, setIsWebGiViewerLoaded] = useState(false);
-  const [modelPath, setModelPath] = useState("../BandaV2.glb");
+  const containerRef = useRef(null);
 
   const { t, i18n } = useTranslation();
 
@@ -76,7 +76,7 @@ export default function Airports() {
       <div className="h-full">
         <ProgressBar />
         <LoadingScreen isVisible={!isWebGiViewerLoaded} />
-        <WebGiViewer modelPath={modelPath}/>
+        <WebGiViewer/>
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />
@@ -127,7 +127,7 @@ export default function Airports() {
           </SlidableController>
         </section>
         <section className="panel h-full">
-          <ModelViewer changeModel={handleChangeModelPath}/>
+          <GuardianConcept/>
         </section>
         <GalleryAirports/>
       </div>
