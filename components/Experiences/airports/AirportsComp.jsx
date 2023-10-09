@@ -7,6 +7,7 @@ import { BsDot } from "react-icons/bs";
 // framer motion
 import { motion } from 'framer-motion';
 
+
 const AirportsComp = () => {
 
     const { t, i18n } = useTranslation();

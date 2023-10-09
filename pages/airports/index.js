@@ -28,12 +28,14 @@ import {i18n as i18nfile} from "../../i18n";
 import { subscribeToCustomEvent } from "../../components/Languages/eventService";
 import ModelViewer from "@/components/Experiences/airports/ModelViewer";
 import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive";
+import dynamic from 'next/dynamic'
+ 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Airports() {
   const [isWebGiViewerLoaded, setIsWebGiViewerLoaded] = useState(false);
-  const [modelPath, setModelPath] = useState("../BandaV2.glb");
+  const containerRef = useRef(null);
 
   const { t, i18n } = useTranslation();
 
@@ -77,7 +79,7 @@ export default function Airports() {
       <div className="h-full">
         <ProgressBar />
         <LoadingScreen isVisible={!isWebGiViewerLoaded} />
-        <WebGiViewer modelPath={modelPath}/>
+        <WebGiViewer/>
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />

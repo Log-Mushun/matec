@@ -29,7 +29,8 @@ const resources = {
       "airport-driver2-title": "Entry Baggage Claim: The Final Touch",
       "footer-credits": "Credits",
       "footer-privacy": "Privacy Policy",
-      "footer-cookies": "Cookies"
+      "footer-cookies": "Cookies",
+      "visor-modelos-title": "Our products"
     }    
   },
   de:{
@@ -59,7 +60,9 @@ const resources = {
       "airport-driver2-title": "Gepäckabholung am Eingang: Der letzte Schliff",
       "footer-credits": "Credits",
       "footer-privacy": "Datenschutzrichtlinie",
-      "footer-cookies": "Cookies"
+      "footer-cookies": "Cookies",
+      "visor-modelos-title": "Unsere Produkte"
+
     }
   },
   cn:{
@@ -89,7 +92,9 @@ const resources = {
       "airport-driver2-title": "行李提取入口：最后的润色",
       "footer-credits": "制作者",
       "footer-privacy": "隐私政策",
-      "footer-cookies": "Cookie"
+      "footer-cookies": "Cookie",
+      "visor-modelos-title": "我们的产品"
+
     }
   },
   fr:{
@@ -119,7 +124,9 @@ const resources = {
       "airport-driver2-title": "Réclamation des bagages d'entrée : La touche finale",
       "footer-credits": "Crédits",
       "footer-privacy": "Politique de confidentialité",
-      "footer-cookies": "Cookies"
+      "footer-cookies": "Cookies",
+      "visor-modelos-title": "Nos produits"
+
     }  
   },
   pt:{
@@ -149,7 +156,9 @@ const resources = {
       "airport-driver2-title": "Reclamação de Bagagem de Entrada: O Toque Final",
       "footer-credits": "Créditos",
       "footer-privacy": "Política de Privacidade",
-      "footer-cookies": "Cookies"
+      "footer-cookies": "Cookies",
+      "visor-modelos-title": "Nossos produtos"
+
     }
   },
   es: {
@@ -187,6 +196,7 @@ const resources = {
       "footer-credits":"Creditos",
       "footer-privacy":"Política de privacidad",
       "footer-cookies":"Cookies",
+      "visor-modelos-title": "Nuestros productos"
 
 
     

@@ -12,30 +12,31 @@ import { useEffect } from "react";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import {i18n as i18nfile} from "../../i18n";
 import CrossBeltModelCanvas from "./CrossBeltModelCanvas";
+import PlusButton from "../PlusButton";
+import TitleAux from "../TitleAux";
 
 const Container = styled.div`
 height: 100vh;
 position: relative;
-  z-index: 13;
+  z-index:12;
   background-color: transparent;
 `;
 const Section = styled.div`
   width: 100vw;
   height: 100vh;
   position: relative;
-  z-index: 13;
-
-  background-color: "#DBDBDB";
+  z-index:200;
+  background-color: "#70A6CB";
 `;
 const Modelos = styled.div`
   width: 100%;
-  height: 100%;
+  height: 90%;
   top:4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  z-index:200;
   position: relative;
   cursor: grab;
 `;
@@ -99,7 +100,6 @@ const Btn = styled.button`
   align-items: center;
 
   margin: 0;
-  padding: 0.4rem 1rem;
   border-radius: 50px;
 
   border: none;
@@ -162,8 +162,11 @@ const ModelsInteractive = () => {
     <Container>
       <Section ref={sectionRef}>
         <Modelos>
-          <IndicatorText>Check our solutions</IndicatorText>
-          <CrossBeltModelCanvas/>
+        <TitleAux number={3}
+              
+              title={t("visor-modelos-title")}
+              titlesize='text-[4.5vh]'/>
+          <CrossBeltModelCanvas />
 
           {/* <Colors>
             <Color
@@ -200,11 +203,9 @@ const ModelsInteractive = () => {
         </Modelos>
 
         <Details>
-{/*           <SubTitle>(BHS)</SubTitle>
- */}          {/* <Title>Baggage Handling System</Title>
-          <SubTitle>Contactanos</SubTitle> */}
+
           <ButtonContainer>
-            <Btn>COMPRAR</Btn>
+          <BtnLink href="#">CONOCER MÁS &#x2192;</BtnLink>
             <BtnLink href="#">CONOCER MÁS &#x2192;</BtnLink>
           </ButtonContainer>
         </Details>

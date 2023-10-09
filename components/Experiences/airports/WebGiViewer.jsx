@@ -23,7 +23,7 @@ import { scrollAnimation } from '../../../lib/scroll-animation';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function WebGiViewer({modelPath}) {
+function WebGiViewer() {
     const canvasRef = useRef(null);
     if (typeof window !== 'undefined') {
         const event = new Event("webGiViewerLoaded");
@@ -64,7 +64,7 @@ function WebGiViewer({modelPath}) {
             viewer.renderer.refreshPipeline();
     
             //import model
-            await manager.addFromPath(modelPath);
+            await manager.addFromPath('../BandaV2.glb');
             //removes background
             viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
             //disable controns so users can't zoom in/our or rotate our model with the mouse
@@ -91,7 +91,7 @@ function WebGiViewer({modelPath}) {
     
         useEffect(() => {
             setupViewer();
-        }, [modelPath])
+        })
       }
     return (
  <div className='fixed inset-0 z-[12] webgi-viewer-class' id='webgi-viewer'>
