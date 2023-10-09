@@ -112,7 +112,7 @@ const TitleAux = (props) => {
   return (
     <div className="w-full justify-center align-center flex">
 
-          <h2 className={`z-[200] relative ml-4 ${props.titlesize}`} id={`button-title${props.number}`}>
+          <h2 className={`z-[200] relative ${props.titlesize}`} id={`button-title${props.number}`}>
             {props.title}
           </h2>
     </div>

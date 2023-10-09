@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
@@ -14,6 +14,8 @@ import {i18n as i18nfile} from "../../i18n";
 import CrossBeltModelCanvas from "./CrossBeltModelCanvas";
 import PlusButton from "../PlusButton";
 import TitleAux from "../TitleAux";
+import CVRAModelCanvas from "./CVRAModelCanvas";
+import MakeupModelCanvas from "./MakeupModelCanvas";
 
 const Container = styled.div`
 height: 100vh;
@@ -26,7 +28,6 @@ const Section = styled.div`
   height: 100vh;
   position: relative;
   z-index:200;
-  background-color: "#000000";
 `;
 const Modelos = styled.div`
   width: 100%;
@@ -89,39 +90,56 @@ const SubTitle = styled.h2`
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  background: grey;
+  border-radius: 24px;
+  padding-top:1rem;
+  padding-right:1rem;
+  padding-left:1rem;
+
+  z-index: 100000000;
+  opacity:0.8;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const Btn = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  width: 100%;
   margin: 0;
-  border-radius: 50px;
-
+  padding:0.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
   border: none;
   outline: none;
-
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
+  z
+  opacity: 0.9;
+  transition: opacity 0.2s ease, filter 0.2s ease; /* Agregar transiciones para opacidad y filtro */
 
   &:hover {
-    opacity: 0.7;
+    opacity: 1;
+    transform: translateY(-2px);
   }
-`;
-const BtnLink = styled.a`
-  color: var(--blue);
-  text-decoration: none;
-  margin-left: 1.5rem;
 
-  &:hover {
-    text-decoration: underline;
-  }
+  /* Agregar estilos para el botón activo */
+  ${props =>
+    props.active &&
+    `
+    background-color: black;
+    color: white;
+    opacity: 1;
+    filter: blur(0); /* Eliminar el efecto de desenfoque cuando está activo */
+    transform: translateY(0); /* Eliminar el desplazamiento */
+  `}
 `;
+
 
 const IndicatorText = styled.div`
   font-size: var(--fontsm);
@@ -133,7 +151,11 @@ const IndicatorText = styled.div`
 const ModelsInteractive = () => {
   const sectionRef = useRef(null);
   const refModel = useRef(null);
+  const [activeTab, setActiveTab] = useState(0);
 
+  const handleTabClick = index => {
+    setActiveTab(index);
+  };
   const { t, i18n } = useTranslation();
 
   const { currentColor, changeColorContext } = useContext(ColorContext);
@@ -144,7 +166,7 @@ const ModelsInteractive = () => {
   
 
   useEffect(() => {
-    sectionRef.current.style.backgroundColor = `#8C8C8C`;
+    sectionRef.current.style.backgroundColor = `#134579`;
   }, [currentColor]);
 
   let updateColor = (color, text, rgbColor) => {
@@ -166,7 +188,9 @@ const ModelsInteractive = () => {
               
               title={t("visor-modelos-title")}
               titlesize='text-[4.5vh]'/>
-          <CrossBeltModelCanvas />
+          {activeTab === 0 ? <CrossBeltModelCanvas /> : null}
+          {activeTab === 1 ? <CVRAModelCanvas /> : null}
+          {activeTab === 2 ? <MakeupModelCanvas /> : null}
 
           {/* <Colors>
             <Color
@@ -205,7 +229,9 @@ const ModelsInteractive = () => {
         <Details>
 
           <ButtonContainer>
-          <BtnLink href="#">CONOCER MÁS &#x2192;</BtnLink>
+          <Btn active={activeTab === 0} onClick={() => handleTabClick(0)}>CROOSBELT SORT</Btn>
+          <Btn active={activeTab === 1} onClick={() => handleTabClick(1)}>CVRA</Btn>
+          <Btn active={activeTab === 2} onClick={() => handleTabClick(2)}>MAKEUP</Btn>
           </ButtonContainer>
         </Details>
       </Section>
