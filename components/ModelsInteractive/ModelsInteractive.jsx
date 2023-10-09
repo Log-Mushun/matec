@@ -26,7 +26,7 @@ const Section = styled.div`
   height: 100vh;
   position: relative;
   z-index:200;
-  background-color: "#70A6CB";
+  background-color: "#000000";
 `;
 const Modelos = styled.div`
   width: 100%;
@@ -206,7 +206,6 @@ const ModelsInteractive = () => {
 
           <ButtonContainer>
           <BtnLink href="#">CONOCER MÁS &#x2192;</BtnLink>
-            <BtnLink href="#">CONOCER MÁS &#x2192;</BtnLink>
           </ButtonContainer>
         </Details>
       </Section>
