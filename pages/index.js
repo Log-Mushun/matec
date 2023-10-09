@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { FaSuitcaseRolling } from 'react-icons/fa'
 import { GiCardboardBoxClosed } from 'react-icons/gi'
 import { FaBoxesPacking } from 'react-icons/fa6'
-
+import { I18nextProvider, useTranslation } from "react-i18next";
+import {i18n as i18nfile} from "../i18n";
 // components
+import NoSSR from 'react-no-ssr'; // Importa react-no-ssr
 
 // framer motion
 import { AnimatePresence, motion } from 'framer-motion';
@@ -22,12 +24,14 @@ import { useEffect } from 'react';
 import { gsap } from "gsap/dist/gsap";
 
 import SplitType from 'split-type';
+import Languages from '@/components/Languages/Languages';
 
 
 
 // ... (código anterior)
 
 const Home = () => {
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const ourText = new SplitType('#titulo_selector', { types: 'chars' })
@@ -63,6 +67,9 @@ const Home = () => {
 
 
   return (
+    <I18nextProvider i18n={i18nfile}>
+      <NoSSR>
+
     <AnimatePresence>
       <motion.div className='h-full'>
         <Transition />
@@ -75,9 +82,10 @@ const Home = () => {
                 id='titulo_selector'
                 className='text-l md:text-2xl lg:text-2xl text-[#003b71] opacity-80 text-center hover:opacity-20 transition-opacity duration-300 z-10'
               >
-                Selecciona tu experiencia
+                {t('selector-title')}
               </h4>
-              <p id='titulo_selector_span' className='block w-[100%] h-[0.2rem] bg-[#ffffff] mt-0'></p>
+
+
             </div>
             <div className='text-center md:flex-row lg:flex-row flex items-center justify-center sm:gap-0 lg:gap-20 lg:pt-20  container mx-auto flex-col relative top-[10%]'>
               {/*suitcase*/}
@@ -91,7 +99,7 @@ const Home = () => {
                 <Link href='/airports'>
                   <div className='bg-transparent hover:bg-hoverbg hover:bg-cover hover:bg-no-repeat h-full w-[12rem] flex justify-end flex-col items-center'>
                     <FaSuitcaseRolling size={128} className='text-[#003d71] lg:w-36 lg:h-36 md:w-20 md:h-20 w-14 z-10 hidden md:inline' />
-                    <h1 className='text-[#003d71] text-center pt-5 z-10 text-2xl'>Aeropuertos</h1>
+                    <h1 className='text-[#003d71] text-center pt-5 z-10 text-2xl'>{t('selector-aeropuerto')}</h1>
                   </div>
                 </Link>
               </motion.div>
@@ -105,7 +113,7 @@ const Home = () => {
               >                <Link href='/airports'>
                   <div className='bg-transparent hover:bg-hoverbg hover:bg-cover hover:bg-no-repeat h-full w-[12rem] flex justify-end flex-col items-center'>
                     <GiCardboardBoxClosed size={128} className='text-[#003d71] lg:w-36 lg:h-36 md:w-20 md:h-20 hidden lg:block md:inline' />
-                    <h1 className='text-[#003d71] text-center pt-5 text-2xl'>Papel y carton</h1>
+                    <h1 className='text-[#003d71] text-center pt-5 text-2xl'>{t('selector-papel')}</h1>
                   </div>
                 </Link>
               </motion.div>
@@ -120,23 +128,29 @@ const Home = () => {
                 <Link href='/airports'>
                   <div className='bg-transparent hover:bg-hoverbg hover:bg-cover hover:bg-no-repeat h-full w-[12rem] flex justify-end flex-col items-center'>
                     <FaBoxesPacking size={128} className='text-[#003d71] lg:w-36 lg:h-36 md:w-20 md:h-20 hidden lg:block md:inline' />
-                    <h1 className='text-[#003d71] text-center pt-5 text-2xl'>Logística</h1>
+                    <h1 className='text-[#003d71] text-center pt-5 text-2xl'>{t('selector-logi')}</h1>
                   </div>
                 </Link>
               </motion.div>
             </div>
+            <div className='fixed bottom-0 left-0 w-full p-4 text-center z-10'>
+        <div className='flex justify-center items-center'>
+          <Languages />
+        </div>
+      </div>
           </div>
+          
           <div className='w-full h-full absolute right-0 bottom-0 z-0'>
             <Plexus isStart={true} />
-            {/* particles */}
-            {/* <ParticlesContainer /> */}
+
           </div>
-          {/*   <div className='w-full h-full absolute right-0 bottom-0 '>
-             <ParticlesContainerBackground  />
-    </div> */}
+
         </div>
       </motion.div>
     </AnimatePresence>
+    </NoSSR>
+    </I18nextProvider>
+
   );
 };
 
