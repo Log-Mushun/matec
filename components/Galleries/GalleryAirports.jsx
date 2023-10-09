@@ -4,7 +4,9 @@ import gsap from "gsap";
 import React from "react";
 import { useLayoutEffect } from "react";
 import { useRef } from "react";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import styled from "styled-components";
+import {i18n as i18nfile} from "../../i18n";
 
 
 
@@ -98,6 +100,8 @@ const Title = styled.h1`
 `;
 
 const GaleryAirports = () => {
+  const { t, i18n } = useTranslation();
+
   const sectionRef = useRef(null);
 
   const videoRef1 = useRef(null);
@@ -162,6 +166,8 @@ const GaleryAirports = () => {
   }, []);
 
   return (
+    <I18nextProvider i18n={i18nfile}>
+
     <Section ref={sectionRef}>
       
       <V1 ref={videoRef1} src={'videos/bhs.mp4'} type="video/mp4" autoPlay muted loop />
@@ -174,6 +180,8 @@ const GaleryAirports = () => {
         <Title>Software</Title>
       </TitleContainer>
     </Section>
+    </I18nextProvider>
+
   );
 };
 

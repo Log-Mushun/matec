@@ -9,13 +9,15 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { ColorContext } from "./ColorContext";
 import { useEffect } from "react";
+import { I18nextProvider, useTranslation } from "react-i18next";
+import {i18n as i18nfile} from "../../i18n";
+import CrossBeltModelCanvas from "./CrossBeltModelCanvas";
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+height: 100vh;
+position: relative;
   z-index: 13;
-  overflow: hidden;
+  background-color: transparent;
 `;
 const Section = styled.div`
   width: 100vw;
@@ -132,6 +134,7 @@ const ModelsInteractive = () => {
   const sectionRef = useRef(null);
   const refModel = useRef(null);
 
+  const { t, i18n } = useTranslation();
 
   const { currentColor, changeColorContext } = useContext(ColorContext);
 
@@ -154,22 +157,13 @@ const ModelsInteractive = () => {
   };
 
   return (
+    <I18nextProvider i18n={i18nfile}>
+
     <Container>
       <Section ref={sectionRef}>
         <Modelos>
-          <IndicatorText>COTIZA TU SISTEMA HOY</IndicatorText>
-          <Canvas camera={{ fov: 14 }} ref={refModel} style={{marginTop:'3rem'}} >
-            <ambientLight intensity={1} />
-            <directionalLight intensity={0.4} />
-            <Suspense fallback={null}>
-              <CrossBeltModel />
-            </Suspense>
-
-            <Environment preset="night" />
-            <AdaptiveDpr pixelated />
-            <AdaptiveEvents />
-            <OrbitControls enableZoom={false} />
-          </Canvas>
+          <IndicatorText>Check our solutions</IndicatorText>
+          <CrossBeltModelCanvas/>
 
           {/* <Colors>
             <Color
@@ -216,6 +210,8 @@ const ModelsInteractive = () => {
         </Details>
       </Section>
     </Container>
+    </I18nextProvider>
+
   );
 };
 

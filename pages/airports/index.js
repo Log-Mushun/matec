@@ -115,6 +115,7 @@ export default function Airports() {
             />
           </SlidableController>
         </section>
+        <>
         <section className="panel h-full">
           <SlidableController>
             <DriverOneFunctions />
@@ -127,13 +128,20 @@ export default function Airports() {
             text={t('airport-slidable-texto3')}/>
           </SlidableController>
         </section>
-      
+        </>
         <section className="panel h-full">
-        <GalleryAirports/>
+        <SlidableController>
+
+          <GalleryAirports/>
+          </SlidableController>
+
         </section>
-        <section className="panel h-[100vh]">
-        
+        <section className="panel h-full">
+        <SlidableController>
+
        <ModelsInteractive/>
+       </SlidableController>
+
        </section>
 
       </div>
