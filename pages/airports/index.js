@@ -78,6 +78,7 @@ export default function Airports() {
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />
+        <AirportsFooter/>
         <section className="panel h-full">
           <AirportsComp />
         </section>
@@ -88,7 +89,8 @@ export default function Airports() {
               right="left-[17%]"
               top="top-[15%]"
               title={t('airport-driver1-title')}
-              titlesize='text-[4.5vh]' />
+              titlesize='text-[4.5vh]' 
+              clicktext={t('click')}/>
             <SlidableDriverInfo number={1}
               title={t('airport-driver1-title-sidebar')}
               text={t('airport-driver1-text-sidebar')}
@@ -101,7 +103,7 @@ export default function Airports() {
         </div>
         <div className="w-screen flex items-center text-center">
           <h1 className="text-4xl relative z-[11] w-full pb-5">
-            Seguridad en el aeropuerto
+            {t("airport-driver2-title-safety")}
           </h1>
         </div>
         <section className="panel h-full">
@@ -111,6 +113,7 @@ export default function Airports() {
               right="right-[-50%]"
               top="top-[65%]"
               title={t('airport-driver1-title2')}
+              clicktext={t('click')}
               titlesize='text-[5vh]'
             />
             <SlidableDriverInfo number={2}

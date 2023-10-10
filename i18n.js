@@ -259,7 +259,9 @@ const resources = {
       "header-home": "Inicio",
       "airport-desliza": "Desliza hacia abajo",
       "airport-driver1-title": "Check-In Eficiente con una Sonrisa",
-      "airport-driver1-title2": "Seguridad del aeropuerto",
+
+      "airport-driver2-title-safety":"Seguridad en el aeropuerto",
+      "airport-driver1-title2": "Leer más",
 
       "airport-driver1-tab1-title": "Soluciones En tiempo Real para Resolución de Desafíos",
       "airport-driver1-tab1-text": "En el núcleo de la sala de control del BHS, nuestros expertos actúan como ángeles guardianes, integrándose al sistema  On-Screen Resolution (OSR) para abordar desafíos en tiempo real y garantizar un flujo constante y seguro de equipaje. Detrás de esta tecnología, hay un equipo humano altamente capacitado que responde de manera eficaz ante situaciones imprevistas. La ingeniería humana se destaca al tomar decisiones informadas y rápidas que mantienen la operación en movimiento sin problemas.",
@@ -289,6 +291,8 @@ const resources = {
       "guardian-angel-title": "MATEC: El ángel guardián en Sistemas de Manejo de Equipaje para Aeropuertos",
       "guardian-angel-text1": "MATEC, tu aliado visionario en sistemas de manejo de equipaje para aeropuertos, asume con pasión el papel de Creador. Desde el momento en que los pasajeros realizan el check-in hasta la recogida de su equipaje en el área de reclamo, nuestro compromiso es claro: ofrecer soluciones innovadoras que optimicen la eficiencia, la seguridad y la comodidad, impulsando al mismo tiempo la rentabilidad y la sostenibilidad. A continuación, exploramos cómo MATEC agrega un toque humano a áreas críticas, como el Check-In, la Inspección de Seguridad, la Clasificación de Equipaje (Make Up), el Reclamo de Equipaje y más.",
       "guardian-angel-text2": "Este es un momento de reflexión sobre las necesidades de los aeropuertos, que son nuestros protegidos. Los aeropuertos son, a su vez, los guardianes de los pasajeros y trabajan incansablemente para asegurarse de que la experiencia de viaje esté a la altura de cada vuelo. Cada vuelo tiene un propósito, ya sea el cierre de un gran negocio que traerá prosperidad a la empresa de uno de nuestros pasajeros, unas vacaciones familiares que crearán recuerdos de por vida, el regreso después de un largo período lejos de casa, el recuerdo de un ser querido, o simplemente el reencuentro con personas queridas en el país de origen. Todos estos son motivos significativos para nuestros pasajeros, y nuestro papel es garantizar que lo que llevan consigo para lograr sus objetivos llegue oportunamente y en perfectas condiciones.",
+
+      "click":"¡Clíc aquí!",
 
 
       "airport-driver2-title": "Centro de Control BHS: Tu Núcleo de Operaciones Confiable",

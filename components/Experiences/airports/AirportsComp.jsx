@@ -40,7 +40,6 @@ const AirportsComp = () => {
                     <h2 className="text-xl">{t('airport-desliza')}</h2>
                 </div>
         </div>
-            <AirportsFooter/>
         </div>
         </I18nextProvider>
     );

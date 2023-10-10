@@ -27,7 +27,7 @@ const PlusButton = (props) => {
 
     if (driverOneElement) {
       gsap.to(webGiViewer, { x: -450, duration: 0.5 });
-      gsap.to(plusButton, { opacity: 0, cursor: "auto", duration: 0 });
+      gsap.to(`.plus-button${props.number}`, { opacity: 0, cursor: "auto", duration: 0 });
       gsap.to(slidableDriverInfo, { width: 500, duration: 0.5 });
       gsap.to(crossClose, { opacity: 1, cursor: "pointer", duration: 0.3 });
       gsap.to(headerExperience, { zIndex: 30, duration: 0.1 });
@@ -59,7 +59,7 @@ const PlusButton = (props) => {
     if (clicked) {
 
       gsap.to(webGiViewer, { x: 0, duration: 0.5 });
-      gsap.to(plusButton, { opacity: 1, cursor: "pointer", duration: 0.5, delay: 0.5 });
+      gsap.to(`.plus-button${props.number}`, { opacity: 1, cursor: "pointer", duration: 0.5, delay: 0.5 });
       gsap.to(slidableDriverInfo, { width: 0, duration: 0.5 });
       gsap.to(crossClose, { opacity: 0, cursor: "auto", duration: 0.1 });
       gsap.to(headerExperience, { zIndex: 200, duration: 0.1 });
@@ -114,7 +114,7 @@ const PlusButton = (props) => {
       <div className={`absolute w-full h-full ${props.right} ${props.top}`}>
         <div className="flex flex-row z-1 items-center">
           <div>
-            <h3 className="z-[11] relative">Click me!</h3>
+            <h3 className={`z-[11] relative plus-button${props.number} opacity-0`}>{props.clicktext}</h3>
             <div
               className={`flex items-center justify-center w-24 h-24 relative cursor-pointer z-1 opacity-0 plus-button${props.number}`}
               id={`plus-button${props.number}`}

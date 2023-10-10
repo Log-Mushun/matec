@@ -25,7 +25,7 @@ const SlidableDriverInfo = (props) => {
 
     {
       gsap.to(webGiViewer, { x: 0, duration: 0.5 });
-      gsap.to(plusButton, { opacity: 1, cursor: "pointer", duration: 0.5, delay: 0.4 });
+      gsap.to(`.plus-button${props.number}`, { opacity: 1, cursor: "pointer", duration: 0.5, delay: 0.4 });
       gsap.to(slidableDriverInfo, { width: 0, duration: 0.5 });
       gsap.to(crossClose, { opacity: 0, cursor: "auto", duration: 0.1 });
       gsap.to(headerExperience, { zIndex: 200, duration: 0.1 });
@@ -81,10 +81,10 @@ const SlidableDriverInfo = (props) => {
         />
       </div>
       <div className='flex flex-row'>
-        <div className='bg-[#021322] w-[20%] h-[100%] min-h-[150vh] relative flex items-center justify-center'>
+        <div className='bg-[#021322] w-[20%] h-full min-h-[190vh] relative flex items-center justify-center'>
           <ParticlesContainer number={props.number} />
         </div>
-        <div className='relative bg-gradient-to-t from-[#021322] to-[#213541]  h-[150vh] w-[80%]'>
+        <div className='relative bg-gradient-to-t from-[#021322] to-[#213541]  h-full w-[80%]'>
           <div className='flex flex-col'>
             <h1 className='text-2xl pt-16 pl-10'>
               {props.title}
@@ -98,7 +98,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3'>
                     {props.text}
                   </p>
                 </div>
@@ -115,7 +115,7 @@ const SlidableDriverInfo = (props) => {
                   ></iframe>
                 </div>
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3'>
                     {props.text2}
                   </p>
                 </div>
