@@ -12,7 +12,7 @@ export default function CrossBeltModel(props) {
 
 
   return (
-    <group ref={group} {...props} dispose={null} position={[0,0,1]} scale={[0.03,0.03,0.03]}>
+    <group ref={group} {...props} dispose={null} position={[0,0,1]} scale={[0.038,0.038,0.038]}>
       <group name="Scene">
         <group
           name="62001_(Layer_0)005"

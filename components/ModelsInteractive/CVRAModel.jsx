@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 export default function CVRAModel(props) {
   const { nodes, materials } = useGLTF("/cvra.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={[1.2,1.2,1.2]}> 
       <mesh
         castShadow
         receiveShadow
