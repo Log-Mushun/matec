@@ -22,75 +22,58 @@ import { FreeMode, Pagination } from 'swiper';
 // service data
 export const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Sistemas Ergonómicos de Alimentación de Equipaje:',
+    description: 'Diseñados para una manipulación segura y eficiente del equipaje.'
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Integración con Sistemas de Inspección por Rayos X:',
+    description: 'Para una inspección efectiva y segura del equipaje.'
   },
   {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Sistemas de Re-etiquetado Manual:',
+    description: 'Ideal para equipaje en conexión o aquel que requiere inspección adicional.'
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Sistemas de Identificación y Seguimiento:',
+    description: 'Para un seguimiento preciso de cada pieza de equipaje.'
   },
   {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Sistemas de Reconciliación de Equipaje (BRS - Baggage Reconciliation System):',
+    description: 'Garantizan la correspondencia entre el equipaje y el pasajero.'
+  },
+  {
+    title: 'Carruseles Planos:',
+    description: 'Brindan ergonomía y seguridad para los pasajeros.'
+  },
+  {
+    title: 'Carruseles Inclinados:',
+    description: 'Permiten una mayor acumulación y funcionalidad.'
   },
 ];
 
 const ServiceSlider = () => {
   return (
-    <Swiper
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        },
-
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-      }}
-      freeMode={true}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[FreeMode, Pagination]}
-      className='h-[240px] sm:h-[340px]'
+    <div
+      className='h-full sm:h-full'
     >
       {serviceData.map((item, index) => {
         return (
-          <SwiperSlide key={index}>
-            <div className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'>
-              {/* icon */}
-              <div className='text-4xl text-accent mb-4'>{item.icon}</div>
+          <div key={index}>
+            <div className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 z-[30] mb-5 w-[80%]'>
               {/* title & desc */}
               <div className='mb-8'>
-                <div className='mb-2 text-lg'>{item.title}</div>
+                <div className='mb-2 text-lg'><h3>
+                  {item.title}
+                </h3></div>
                 <p className='max-w-[350px] leading-normal'>
                   {item.description}
                 </p>
               </div>
-              {/* arrow */}
-              <div className='text-3xl'>
-                <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-accent transition-all duration-300' />
-              </div>
             </div>
-          </SwiperSlide>
+          </div>
         );
       })}
-    </Swiper>
+    </div>
   );
 };
 

@@ -30,6 +30,7 @@ import ModelViewer from "@/components/Experiences/airports/ModelViewer";
 import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive";
 import dynamic from 'next/dynamic'
 import DispelModel from "@/components/Experiences/airports/DispelModel";
+import Closing from "@/components/Experiences/airports/Closing";
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -131,15 +132,18 @@ export default function Airports() {
                 right="left-[9%]"
                 top="top-[20%]"
                 title={t("airport-driver2-title")}
-                titlesize='text-[4.5vh]' />
+                titlesize='text-[4.5vh]' 
+                clicktext={t('click')}/>
               <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
                 text={t('airport-slidable-texto3')}
-                text2={t('airport-slidable-texto4')} />
+                text2={t('airport-slidable-texto4')} 
+                />
             </SlidableController>
           </section>
         </>
         <section className="panel h-full">
           <GuardianConcept />
+          <Closing/>
           <ModelsInteractive />
         </section>
         <section className="panel h-full">

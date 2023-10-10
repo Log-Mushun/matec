@@ -36,8 +36,8 @@ const FunctionsText = () => {
                     <div className='mb-2 md:mb-0 flex flex-row w-screen justify-around px-20'>
                         {buttons.map((button, index) => (
                             <div key={index} className={`flex flex-col items-start text-left ${index === selectedIndex ? 'opacity-100' : 'opacity-25'} w-[40%] transition-opacity duration-300`}>
-                                <h1 className='text-[200%] pt-10'>{button}</h1>
-                                <p className='text-[70%] text-white'>{descriptions[index]}</p>
+                                <h1 className='text-[150%] pt-10'>{button}</h1>
+                                <p className='text-[80%] text-white'>{descriptions[index]}</p>
                             </div>
                         ))}
                     </div>
