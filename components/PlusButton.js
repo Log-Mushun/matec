@@ -112,27 +112,30 @@ const PlusButton = (props) => {
   return (
     <div key={props.number} className="w-full h-full">
       <div className={`absolute w-full h-full ${props.right} ${props.top}`}>
-        <div className="flex flex-row z-1 items-center">  {/* Updated this line */}
-          <div
-            className={`flex items-center justify-center w-24 h-24 relative cursor-pointer z-1 opacity-0 plus-button${props.number}`}
-            id={`plus-button${props.number}`}
-            onClick={handleClick}
-            key={props.number}
-          >
-            <Image
-              src={"/circle_outside_plus.svg"}
-              width={200}
-              height={200}
-              alt="a rotating circle"
-              className="relative animate-spin"
-            />
-            <Image
-              src={"/icon_button_driverv2.svg"}
-              width={50}
-              height={50}
-              alt="matec logo, it represents two wings"
-              className="absolute"
-            />
+        <div className="flex flex-row z-1 items-center">
+          <div>
+            <h3 className="z-[200] relative">Click me!</h3>
+            <div
+              className={`flex items-center justify-center w-24 h-24 relative cursor-pointer z-1 opacity-0 plus-button${props.number}`}
+              id={`plus-button${props.number}`}
+              onClick={handleClick}
+              key={props.number}
+            >
+              <Image
+                src={"/circle_outside_plus.svg"}
+                width={200}
+                height={200}
+                alt="a rotating circle"
+                className="relative animate-spin"
+              />
+              <Image
+                src={"/icon_button_driverv2.svg"}
+                width={50}
+                height={50}
+                alt="matec logo, it represents two wings"
+                className="absolute"
+              />
+            </div>
           </div>
           <h2 className={`z-[200] relative ml-4 ${props.titlesize}`} id={`button-title${props.number}`}>
             {props.title}

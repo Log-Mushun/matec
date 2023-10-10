@@ -14,7 +14,7 @@ const resources = {
       "header-home": "Home",
       "header-airport": "Airports",
       "airport-desliza": "Scroll Down",
-      "airport-driver1-title": "DRIVER #1: Efficient Check-In with a Smile",
+      "airport-driver1-title": ": Efficient Check-In with a Smile",
       "airport-driver1-title2": "Airport Security",
 
       "airport-driver1-tab1-title": "Real-Time Solutions for Challenge Resolution",
@@ -258,7 +258,7 @@ const resources = {
       "header-airport": "Aeropuertos",
       "header-home": "Inicio",
       "airport-desliza": "Desliza hacia abajo",
-      "airport-driver1-title": "DRIVER #1: Check-In Eficiente con una Sonrisa",
+      "airport-driver1-title": "Check-In Eficiente con una Sonrisa",
       "airport-driver1-title2": "Seguridad del aeropuerto",
 
       "airport-driver1-tab1-title": "Soluciones En tiempo Real para Resolución de Desafíos",
@@ -277,7 +277,7 @@ const resources = {
       "airport-slidable-texto3": 'El Centro de Control del BHS es el núcleo central de nuestra operación. Es aquí donde nuestra tecnología de punta se integra perfectamente para garantizar que cada pieza de equipaje llegue a su destino sin problemas, brindándote la tranquilidad que solo un ángel guardián podría ofrecer. Nuestro personal altamente capacitado coordina procesos complejos, supervisa y optimiza constantemente el flujo de equipaje, asegurando un funcionamiento sin interrupciones. Tecnología Avanzada: El Centro de Control del BHS de MATEC está equipado con la última tecnología en IT para garantizar la operatividad y redundancia del sistema. Integración Perfecta: Se integra de manera fluida con las redes y sistemas de telecomunicaciones de los aeropuertos.',
       "airport-slidable-texto4": 'Gestión de Datos en Tiempo Real: Permite la integración, análisis y generación de informes en tiempo real de todas las operaciones del BHS. Esto incluye gráficos, informes, diagramas y más, proporcionando herramientas esenciales para la gestión confiable y eficiente del BHS. Infraestructura de Vanguardia: El Centro de Control diseñado por MATEC cuenta con lo último en tecnología, desde VideoWall de última generación hasta estaciones de trabajo ergonómicas con redundancia en caliente, sistema de CCTV, datacenter de última generación, redes de fibra óptica y un entorno óptimo para garantizar un funcionamiento ininterrumpido. Integración Completa: En el Centro de Control, podemos integrar, analizar y generar informes a partir de información recopilada de diversas fuentes, incluyendo sistemas PLC, el software de gestión de equipaje MATBag, sistemas de inspección y más. ',
 
-      "airport-driver1-title-sidebar": "Driver #1",
+      "airport-driver1-title-sidebar": "Check in",
       "airport-driver1-text-sidebar": "Comenzamos nuestro viaje con un check-in eficiente y amigable que garantiza una experiencia sin complicaciones y llena de sonrisas para nuestros pasajeros. Detrás de cada proceso de check-in efectivo, se encuentra la meticulosa mano humana que colabora con aeropuertos para diseñar soluciones personalizadas que se ajusten a sus necesidades únicas. Consideramos cada detalle, desde la disposición de las cintas transportadoras hasta la interacción con el personal de la aerolínea. Si bien la tecnología es avanzada, es la atención humana la que perfecciona todo el proceso.",
       "airport-driver1-text-sidebar2": "Nuestro Check-in MATEC ofrece soluciones que permiten pesar, procesar e inyectar el equipaje con precisión y seguridad, de manera silenciosa y delicada. Estas soluciones se integran de forma armoniosa con la arquitectura única de cada aeropuerto. Ya sea a través de nuestro Self Bag Drop (SBD) para una experiencia automática o la integración del BHS con los mostradores de facturación operados por personal, el resultado es siempre un proceso eficiente y cuidadoso. Además, nuestro software de gestión de equipaje, MATBag, se integra sin problemas con el sistema de control de facturación (DCS - Departure Control System), lo que facilita no solo la operación del aeropuerto sino también la experiencia de las aerolíneas y, lo más importante, de los pasajeros.",
 

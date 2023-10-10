@@ -63,7 +63,7 @@ const DriverInsights = () => {
     <I18nextProvider i18n={i18nfile}>
 
     <div className="h-[100vh] text-right pr-40 relative" id="driver-insights">
-      <div className='driver-insightsclass opacity-0 z-[100] absolute w-[35%] pt-[8%] pl-[4%] pr-[3%] bg-[#003b71] bg-opacity-40 h-[100%]'>
+      <div className='driver-insightsclass opacity-0 z-[100] absolute w-[35%] pt-[8%] pl-[4%] pr-[3%] bg-[#003b71] bg-opacity-50 h-[100%]'>
         <div className='flex h-[1vh] mb-4'>
           {driverData.map((item, itemIndex) => (
             <div key={itemIndex} className='w-[20rem]'>

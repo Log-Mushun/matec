@@ -91,13 +91,18 @@ export default function Airports() {
               titlesize='text-[4.5vh]' />
             <SlidableDriverInfo number={1}
               title={t('airport-driver1-title-sidebar')}
-              text={t('airport-driver1-text-sidebar')} 
-              text2={t('airport-driver1-text-sidebar2')}/>
+              text={t('airport-driver1-text-sidebar')}
+              text2={t('airport-driver1-text-sidebar2')} />
           </SlidableController>
         </section>
         {/*SlidableDriverInfo affects the layout of the next element, so we have to let an empty div here in order to avoid the bug */}
         <div>
           <DispelModel />
+        </div>
+        <div className="w-screen flex items-center text-center">
+          <h1 className="text-4xl relative z-[11] w-full pb-5">
+            Seguridad en el aeropuerto
+          </h1>
         </div>
         <section className="panel h-full">
           <SlidableController>
@@ -125,13 +130,13 @@ export default function Airports() {
                 title={t("airport-driver2-title")}
                 titlesize='text-[4.5vh]' />
               <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
-                text={t('airport-slidable-texto3')} 
+                text={t('airport-slidable-texto3')}
                 text2={t('airport-slidable-texto4')} />
             </SlidableController>
           </section>
         </>
         <section className="panel h-full">
-          <GuardianConcept/>
+          <GuardianConcept />
           <ModelsInteractive />
         </section>
         <section className="panel h-full">
