@@ -102,8 +102,8 @@ export default function Airports() {
         <div>
           <DispelModel />
         </div>
-        <div className="w-screen flex items-center text-center">
-          <h1 className="text-4xl relative z-[11] w-full pb-5">
+        <div className="w-screen flex items-center text-left">
+          <h1 className="text-[300%] relative z-[11] w-full pb-5 mb-10 ml-20">
             {t("airport-driver2-title-safety")}
           </h1>
         </div>
@@ -128,16 +128,27 @@ export default function Airports() {
           <section className="panel h-full">
             <SlidableController>
               <div className="bhs h-screen">
-                <PlusButton number={3}
-                  right="left-[9%]"
-                  top="top-[30%]"
-                  title={t("airport-driver2-title")}
-                  titlesize='text-[4.5vh]'
-                  clicktext={t('click')} />
+
+                  <PlusButton number={3}
+                    right="left-[9%]"
+                    top="top-[30%]"
+                    title={t("airport-driver2-title")}
+                    titlesize='text-[4.5vh]'
+                    clicktext={t('click')} />
+
                 <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
                   text={t('airport-slidable-texto3')}
                   text2={t('airport-slidable-texto4')}
                 />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] mb-26"
+                >
+                  <source src='/videos/9controlroom.mp4' type="video/mp4" />
+                  Tu navegador no soporta la reproducción de videos.
+                </video>
               </div>
             </SlidableController>
             <DriverOneFunctions />
@@ -153,20 +164,20 @@ export default function Airports() {
               titlesize='text-[4.5vh]'
               clicktext={t('click')} />
             <SlidableDriverInfo number={4} title="Conjunto de soluciones del BHS de llegadas"
-                titlelist={t('bhs-solution-title1')}
-                textlist={t('bhs-solution-text1')}
-                titlelist2={t('bhs-solution-title2')}
-                textlist2={t('bhs-solution-text2')}
-                titlelist3={t('bhs-solution-title3')}
-                textlist3={t('bhs-solution-text3')}
-                titlelist4={t('bhs-solution-title4')}
-                textlist4={t('bhs-solution-text4')}
-                titlelist5={t('bhs-solution-title5')}
-                textlist5={t('bhs-solution-text5')}
-                titlelist6={t('bhs-solution-title6')}
-                textlist6={t('bhs-solution-text6')}
-                titlelist7={t('bhs-solution-title7')}
-                textlist7={t('bhs-solution-text7')}
+              titlelist={t('bhs-solution-title1')}
+              textlist={t('bhs-solution-text1')}
+              titlelist2={t('bhs-solution-title2')}
+              textlist2={t('bhs-solution-text2')}
+              titlelist3={t('bhs-solution-title3')}
+              textlist3={t('bhs-solution-text3')}
+              titlelist4={t('bhs-solution-title4')}
+              textlist4={t('bhs-solution-text4')}
+              titlelist5={t('bhs-solution-title5')}
+              textlist5={t('bhs-solution-text5')}
+              titlelist6={t('bhs-solution-title6')}
+              textlist6={t('bhs-solution-text6')}
+              titlelist7={t('bhs-solution-title7')}
+              textlist7={t('bhs-solution-text7')}
             />
           </SlidableController>
           {/* <ModelsInteractive /> */}

@@ -35,6 +35,15 @@ const Closing = () => {
                         </div>
                     </div>
                 </div>
+                <video
+            autoPlay
+            loop
+            muted
+            className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] mb-26"
+          >
+            <source src='/videos/8checkout.mp4' type="video/mp4" />
+            Tu navegador no soporta la reproducción de videos.
+          </video>
             </div>
         </I18nextProvider>
     );

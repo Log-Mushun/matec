@@ -6,7 +6,7 @@ const GuardianConcept = () => {
     const { t, i18n } = useTranslation();
     return (
         <I18nextProvider i18n={i18nfile}>
-            <div className="h-full text-right pr-40 pb-24 w-screen left-0 relative flex flex-col items-center justify-start" id="guardian-concept">
+            <div className="h-full text-right pr-40 pb-24 w-screen left-0 relative flex flex-col items-center justify-start mt-48" id="guardian-concept">
                     <h1 className="text-[150%] z-[11]">
                         {t('guardian-angel-title')}
                     </h1>

@@ -92,13 +92,13 @@ const SlidableDriverInfo = (props) => {
             {props.number == 1 && (
               <>
                 <Image
-                  src={'/images/slidable_img1.png'}
+                  src={'/images/checkin.jpeg'}
                   width={270}
                   height={200}
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-[90%]'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-5'>
                     {props.text}
                   </p>
                 </div>
@@ -152,7 +152,7 @@ const SlidableDriverInfo = (props) => {
             {props.number == 3 && (
               <>
                 <Image
-                  src={'/images/CROSSBELTSORT-01.png'}
+                  src={'/images/controlroom.jpeg'}
                   width={320}
                   height={250}
                   className='pt-5 flex self-center justify-self-center'
@@ -163,7 +163,7 @@ const SlidableDriverInfo = (props) => {
                   </p>
                 </div>
                 <Image
-                  src={'/images/CROSSOVER-01.png'}
+                  src={'/images/controlroom2.jpeg'}
                   width={320}
                   height={250}
                   className='pt-5 flex self-center justify-self-center'
