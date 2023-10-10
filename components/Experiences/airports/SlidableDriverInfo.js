@@ -92,13 +92,13 @@ const SlidableDriverInfo = (props) => {
             {props.number == 1 && (
               <>
                 <Image
-                  src={'/images/slidable_img1.png'}
+                  src={'/images/checkin.jpeg'}
                   width={270}
                   height={200}
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-5'>
                     {props.text}
                   </p>
                 </div>
@@ -115,7 +115,7 @@ const SlidableDriverInfo = (props) => {
                   ></iframe>
                 </div>
                 <div>
-                  <p className='pt-3 pl-3 pr-3'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-10'>
                     {props.text2}
                   </p>
                 </div>
@@ -131,7 +131,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%]'>
                     {props.text}
                   </p>
                 </div>
@@ -142,7 +142,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-10'>
                     {props.text2}
                   </p>
                 </div>
@@ -152,26 +152,91 @@ const SlidableDriverInfo = (props) => {
             {props.number == 3 && (
               <>
                 <Image
-                  src={'/images/CROSSBELTSORT-01.png'}
+                  src={'/images/controlroom.jpeg'}
                   width={320}
                   height={250}
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%]'>
                     {props.text}
                   </p>
                 </div>
                 <Image
-                  src={'/images/CROSSOVER-01.png'}
+                  src={'/images/controlroom2.jpeg'}
                   width={320}
                   height={250}
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-10'>
                     {props.text2}
                   </p>
+                </div>
+              </>
+            )
+            }
+            {props.number == 4 && (
+              <>
+                <div className='px-10 py-5'>
+                  <ul className='list-disc'>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist2}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist2}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist3}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist3}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist4}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist4}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist5}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist5}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist6}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist6}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist7}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist7}
+                      </p>
+                    </li>
+                  </ul>
                 </div>
               </>
             )

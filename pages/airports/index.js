@@ -30,6 +30,7 @@ import ModelViewer from "@/components/Experiences/airports/ModelViewer";
 import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive";
 import dynamic from 'next/dynamic'
 import DispelModel from "@/components/Experiences/airports/DispelModel";
+import Closing from "@/components/Experiences/airports/Closing";
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -78,7 +79,7 @@ export default function Airports() {
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />
-        <AirportsFooter/>
+        <AirportsFooter />
         <section className="panel h-full">
           <AirportsComp />
         </section>
@@ -89,8 +90,8 @@ export default function Airports() {
               right="left-[17%]"
               top="top-[15%]"
               title={t('airport-driver1-title')}
-              titlesize='text-[4.5vh]' 
-              clicktext={t('click')}/>
+              titlesize='text-[4.5vh]'
+              clicktext={t('click')} />
             <SlidableDriverInfo number={1}
               title={t('airport-driver1-title-sidebar')}
               text={t('airport-driver1-text-sidebar')}
@@ -101,15 +102,15 @@ export default function Airports() {
         <div>
           <DispelModel />
         </div>
-        <div className="w-screen flex items-center text-center">
-          <h1 className="text-4xl relative z-[11] w-full pb-5">
+        <div className="w-screen flex items-center text-left">
+          <h1 className="text-[300%] relative z-[11] w-full pb-5 mb-10 ml-20">
             {t("airport-driver2-title-safety")}
           </h1>
         </div>
         <section className="panel h-full">
           <SlidableController>
             <DriverInsights />
-            <PlusButton number={2}
+            {/* <PlusButton number={2}
               right="right-[-50%]"
               top="top-[65%]"
               title={t('airport-driver1-title2')}
@@ -120,27 +121,69 @@ export default function Airports() {
               title={t('airport-slidable-title1')}
               text={t('airport-slidable-texto1')}
               text2={t('airport-slidable-texto2')}
-            />
+            /> */}
           </SlidableController>
         </section>
         <>
           <section className="panel h-full">
             <SlidableController>
-              <DriverOneFunctions />
-              <PlusButton number={3}
-                right="left-[9%]"
-                top="top-[20%]"
-                title={t("airport-driver2-title")}
-                titlesize='text-[4.5vh]' />
-              <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
-                text={t('airport-slidable-texto3')}
-                text2={t('airport-slidable-texto4')} />
+              <div className="bhs h-screen">
+
+                  <PlusButton number={3}
+                    right="left-[9%]"
+                    top="top-[30%]"
+                    title={t("airport-driver2-title")}
+                    titlesize='text-[4.5vh]'
+                    clicktext={t('click')} />
+
+                <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
+                  text={t('airport-slidable-texto3')}
+                  text2={t('airport-slidable-texto4')}
+                />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] mb-26"
+                >
+                  <source src='/videos/9controlroom.mp4' type="video/mp4" />
+                  Tu navegador no soporta la reproducción de videos.
+                </video>
+              </div>
             </SlidableController>
+            <DriverOneFunctions />
           </section>
         </>
         <section className="panel h-full">
+          <SlidableController>
+            <Closing />
+            <PlusButton number={4}
+              right="left-[9%]"
+              top="top-[13%]"
+              title={t("closing-title")}
+              titlesize='text-[4.5vh]'
+              clicktext={t('click')} />
+            <SlidableDriverInfo number={4} title="Conjunto de soluciones del BHS de llegadas"
+              titlelist={t('bhs-solution-title1')}
+              textlist={t('bhs-solution-text1')}
+              titlelist2={t('bhs-solution-title2')}
+              textlist2={t('bhs-solution-text2')}
+              titlelist3={t('bhs-solution-title3')}
+              textlist3={t('bhs-solution-text3')}
+              titlelist4={t('bhs-solution-title4')}
+              textlist4={t('bhs-solution-text4')}
+              titlelist5={t('bhs-solution-title5')}
+              textlist5={t('bhs-solution-text5')}
+              titlelist6={t('bhs-solution-title6')}
+              textlist6={t('bhs-solution-text6')}
+              titlelist7={t('bhs-solution-title7')}
+              textlist7={t('bhs-solution-text7')}
+            />
+          </SlidableController>
+          {/* <ModelsInteractive /> */}
+        </section>
+        <section className="panel h-full">
           <GuardianConcept />
-          <ModelsInteractive />
         </section>
         <section className="panel h-full">
           <GalleryAirports />
