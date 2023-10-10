@@ -175,9 +175,9 @@ const GaleryAirports = () => {
       <V3 ref={videoRef3} src={'videos/bhs3d.mp4'} type="video/mp4" autoPlay muted loop />
 
       <TitleContainer ref={titleRef}>
-        {/* <Title>Conoce MATBag</Title>
-        <Title>Nuestro</Title>
-        <Title>Software</Title> */}
+        <Title>Conoce MATEC</Title>
+        <Title>Nuestras</Title>
+        <Title>Soluciones</Title>
       </TitleContainer>
     </Section>
     </I18nextProvider>

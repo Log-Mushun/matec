@@ -110,7 +110,7 @@ export default function Airports() {
         <section className="panel h-full">
           <SlidableController>
             <DriverInsights />
-            <PlusButton number={2}
+            {/* <PlusButton number={2}
               right="right-[-50%]"
               top="top-[65%]"
               title={t('airport-driver1-title2')}
@@ -121,24 +121,26 @@ export default function Airports() {
               title={t('airport-slidable-title1')}
               text={t('airport-slidable-texto1')}
               text2={t('airport-slidable-texto2')}
-            />
+            /> */}
           </SlidableController>
         </section>
         <>
           <section className="panel h-full">
             <SlidableController>
-              <DriverOneFunctions />
-              <PlusButton number={3}
-                right="left-[9%]"
-                top="top-[20%]"
-                title={t("airport-driver2-title")}
-                titlesize='text-[4.5vh]' 
-                clicktext={t('click')}/>
-              <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
-                text={t('airport-slidable-texto3')}
-                text2={t('airport-slidable-texto4')} 
-                />
+              <div className="bhs h-screen">
+                <PlusButton number={3}
+                  right="left-[9%]"
+                  top="top-[20%]"
+                  title={t("airport-driver2-title")}
+                  titlesize='text-[4.5vh]' 
+                  clicktext={t('click')}/>
+                <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
+                  text={t('airport-slidable-texto3')}
+                  text2={t('airport-slidable-texto4')} 
+                  />
+              </div>
             </SlidableController>
+              <DriverOneFunctions />
           </section>
         </>
         <section className="panel h-full">

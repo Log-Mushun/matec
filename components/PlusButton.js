@@ -116,7 +116,7 @@ const PlusButton = (props) => {
           <div>
             <h3 className={`z-[11] relative plus-button${props.number} opacity-0`}>{props.clicktext}</h3>
             <div
-              className={`flex items-center justify-center w-24 h-24 relative cursor-pointer z-1 opacity-0 plus-button${props.number}`}
+              className={`flex items-center justify-center w-24 h-24 relative cursor-pointer opacity-0 plus-button${props.number}`}
               id={`plus-button${props.number}`}
               onClick={handleClick}
               key={props.number}
