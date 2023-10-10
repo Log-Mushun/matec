@@ -36,7 +36,7 @@ const VideoComponent = (props) => {
             autoPlay
             loop
             muted
-            className="h-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
+            className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
             ref={videoRef}
             onCanPlay={handleLoad}
             onLoadedMetadata={handleLoad}

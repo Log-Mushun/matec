@@ -26,7 +26,7 @@ const ProgressBar = () => {
     width: '2px', // Ancho de la barra de progreso
     height: '50vh', // Altura de la barra de progreso (50% de la ventana)
     backgroundColor: '#ffffff', // Color de fondo de la barra
-    zIndex: '14', // Asegura que esté en la parte superior
+    zIndex: '33', // Asegura que esté en la parte superior
     borderRadius:'15px',
   };
 

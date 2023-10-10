@@ -22,8 +22,8 @@ const FunctionsText = () => {
 
     return (
         <>
-            <div className='z-[32] relative functions-text flex flex-col justify-center pt-[10%]'>
-                <div className='w-full flex flex-row pl-28'>
+            <div className='z-[32] relative functions-text flex flex-col justify-center py-[5%] bg-[#003b71] w-screen bg-opacity-50'>
+                <div className='w-full flex flex-row pl-28 pt-10'>
                     {buttons.map((button, index) => (
                         <div
                             key={index}

@@ -79,7 +79,7 @@ export default function Airports() {
         <Plexus isStart={false} />
         <HeaderGeneral />
         <HeaderExperience />
-        <AirportsFooter/>
+        <AirportsFooter />
         <section className="panel h-full">
           <AirportsComp />
         </section>
@@ -90,8 +90,8 @@ export default function Airports() {
               right="left-[17%]"
               top="top-[15%]"
               title={t('airport-driver1-title')}
-              titlesize='text-[4.5vh]' 
-              clicktext={t('click')}/>
+              titlesize='text-[4.5vh]'
+              clicktext={t('click')} />
             <SlidableDriverInfo number={1}
               title={t('airport-driver1-title-sidebar')}
               text={t('airport-driver1-text-sidebar')}
@@ -130,23 +130,49 @@ export default function Airports() {
               <div className="bhs h-screen">
                 <PlusButton number={3}
                   right="left-[9%]"
-                  top="top-[20%]"
+                  top="top-[30%]"
                   title={t("airport-driver2-title")}
-                  titlesize='text-[4.5vh]' 
-                  clicktext={t('click')}/>
+                  titlesize='text-[4.5vh]'
+                  clicktext={t('click')} />
                 <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
                   text={t('airport-slidable-texto3')}
-                  text2={t('airport-slidable-texto4')} 
-                  />
+                  text2={t('airport-slidable-texto4')}
+                />
               </div>
             </SlidableController>
-              <DriverOneFunctions />
+            <DriverOneFunctions />
           </section>
         </>
         <section className="panel h-full">
-          <GuardianConcept />
-          <Closing/>
+          <SlidableController>
+            <Closing />
+            <PlusButton number={4}
+              right="left-[9%]"
+              top="top-[13%]"
+              title={t("closing-title")}
+              titlesize='text-[4.5vh]'
+              clicktext={t('click')} />
+            <SlidableDriverInfo number={4} title="Conjunto de soluciones del BHS de llegadas"
+                titlelist={t('bhs-solution-title1')}
+                textlist={t('bhs-solution-text1')}
+                titlelist2={t('bhs-solution-title2')}
+                textlist2={t('bhs-solution-text2')}
+                titlelist3={t('bhs-solution-title3')}
+                textlist3={t('bhs-solution-text3')}
+                titlelist4={t('bhs-solution-title4')}
+                textlist4={t('bhs-solution-text4')}
+                titlelist5={t('bhs-solution-title5')}
+                textlist5={t('bhs-solution-text5')}
+                titlelist6={t('bhs-solution-title6')}
+                textlist6={t('bhs-solution-text6')}
+                titlelist7={t('bhs-solution-title7')}
+                textlist7={t('bhs-solution-text7')}
+            />
+          </SlidableController>
           {/* <ModelsInteractive /> */}
+        </section>
+        <section className="panel h-full">
+          <GuardianConcept />
         </section>
         <section className="panel h-full">
           <GalleryAirports />

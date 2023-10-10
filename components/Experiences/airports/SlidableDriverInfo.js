@@ -176,6 +176,71 @@ const SlidableDriverInfo = (props) => {
               </>
             )
             }
+            {props.number == 4 && (
+              <>
+                <div className='px-10 py-5'>
+                  <ul className='list-disc'>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist2}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist2}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist3}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist3}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist4}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist4}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist5}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist5}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist6}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist6}
+                      </p>
+                    </li>
+                    <li>
+                      <h3 className='pt-5 pl-3 pr-3'>
+                        {props.titlelist7}
+                      </h3>
+                      <p className='pt-2 pl-3 pr-3 text-[90%]'>
+                        {props.textlist7}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </>
+            )
+            }
           </div>
         </div>
       </div>
