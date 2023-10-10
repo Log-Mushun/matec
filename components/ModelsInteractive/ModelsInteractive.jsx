@@ -230,7 +230,7 @@ const ModelsInteractive = () => {
 
           <ButtonContainer>
           <Btn active={activeTab === 0} onClick={() => handleTabClick(0)}>CROOSBELT SORT</Btn>
-          <Btn active={activeTab === 1} onClick={() => handleTabClick(1)}>CVRA</Btn>
+          <Btn active={activeTab === 1} onClick={() => handleTabClick(1)}>CBRA</Btn>
           <Btn active={activeTab === 2} onClick={() => handleTabClick(2)}>MAKEUP</Btn>
           </ButtonContainer>
         </Details>
