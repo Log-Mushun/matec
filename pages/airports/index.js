@@ -31,6 +31,7 @@ import ModelsInteractive from "@/components/ModelsInteractive/ModelsInteractive"
 import dynamic from 'next/dynamic'
 import DispelModel from "@/components/Experiences/airports/DispelModel";
 import Closing from "@/components/Experiences/airports/Closing";
+import Closing from "@/components/Experiences/airports/Closing";
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
