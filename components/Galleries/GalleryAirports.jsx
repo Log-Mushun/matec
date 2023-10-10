@@ -170,14 +170,14 @@ const GaleryAirports = () => {
 
     <Section ref={sectionRef}>
       
-      <V1 ref={videoRef1} src={'videos/bhs.mp4'} type="video/mp4" autoPlay muted loop />
+      <V1 ref={videoRef1} src={'videos/corporativo2.mp4'} type="video/mp4" autoPlay muted loop />
       <V2 ref={videoRef2} src={'videos/corporativo.mp4'} type="video/mp4" autoPlay muted loop />
       <V3 ref={videoRef3} src={'videos/bhs3d.mp4'} type="video/mp4" autoPlay muted loop />
 
       <TitleContainer ref={titleRef}>
-        <Title>Conoce MATBag</Title>
+        {/* <Title>Conoce MATBag</Title>
         <Title>Nuestro</Title>
-        <Title>Software</Title>
+        <Title>Software</Title> */}
       </TitleContainer>
     </Section>
     </I18nextProvider>

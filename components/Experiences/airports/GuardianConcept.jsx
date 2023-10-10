@@ -16,15 +16,15 @@ const GuardianConcept = () => {
                     height={500}
                     className="z-[11] relative mix-blend-luminosity"
                 />
-                <div className="z-[11] relative bottom-[15%] px-[5%] text-left">
+                <div className="z-[11] relative bottom-[15%] px-[10%] text-left">
                     <div className="flex flex-col">
                         <div>
-                            <p className='text-[80%] text-white'>
+                            <p className='text-[90%] text-white'>
                             {t('guardian-angel-text1')}
                             </p>
                         </div>
                         <div className="pt-[1%]">
-                        <p className='text-[80%] text-white'>
+                        <p className='text-[90%] text-white'>
                             {t('guardian-angel-text2')}
                             </p>
                         </div>

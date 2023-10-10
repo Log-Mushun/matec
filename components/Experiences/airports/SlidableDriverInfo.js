@@ -98,7 +98,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%]'>
                     {props.text}
                   </p>
                 </div>
@@ -115,7 +115,7 @@ const SlidableDriverInfo = (props) => {
                   ></iframe>
                 </div>
                 <div>
-                  <p className='pt-3 pl-3 pr-3'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-10'>
                     {props.text2}
                   </p>
                 </div>
@@ -131,7 +131,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%]'>
                     {props.text}
                   </p>
                 </div>
@@ -142,7 +142,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-10'>
                     {props.text2}
                   </p>
                 </div>
@@ -158,7 +158,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%]'>
                     {props.text}
                   </p>
                 </div>
@@ -169,7 +169,7 @@ const SlidableDriverInfo = (props) => {
                   className='pt-5 flex self-center justify-self-center'
                 />
                 <div>
-                  <p className='pt-3 pl-3 pr-3 text-xs'>
+                  <p className='pt-3 pl-3 pr-3 text-[90%] pb-10'>
                     {props.text2}
                   </p>
                 </div>
