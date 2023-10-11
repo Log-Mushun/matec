@@ -15,10 +15,18 @@ const AirportsFooter = () => {
             <h3 className="row_text_small">{t("footer-cookies")}</h3>
           </div>
           <div className="flex flex-row pr-12 fixed right-5 items-end">
-            <a href="https://www.facebook.com/profile.php?id=100063771316825" target="_blank" className="row_text_big">Facebook</a>
-            <a href="https://www.instagram.com/matec.sas/" target="_blank" className="row_text_big pr-4">Instagram</a>
-            <a href="https://www.linkedin.com/company/78115973/admin/feed/posts/" target="_blank" className="row_text_big pr-4">Linkedin</a>
-            <a href="https://www.youtube.com/channel/UCL1EYtcfz4JvHg6FqUvvfTQ" target="_blank" className="row_text_big">Youtube</a>
+            <p>
+              <a href="https://www.facebook.com/profile.php?id=100063771316825" target="_blank" className="row_text_big">Facebook</a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/matec.sas/" target="_blank" className="row_text_big">Instagram</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/company/78115973/admin/feed/posts/" target="_blank" className="row_text_big">Linkedin</a>
+            </p>
+            <p>
+              <a href="https://www.youtube.com/channel/UCL1EYtcfz4JvHg6FqUvvfTQ" target="_blank" className="row_text_big pr-4">Youtube</a>
+            </p>
 
             <Languages />
           </div>
