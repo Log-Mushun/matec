@@ -32,10 +32,11 @@ function Languages() {
   return (
     <I18nextProvider i18n={i18nfile}>
 
-      <button style={{
+      <button className='bottom-1 right-1' style={{
         width: 'auto',
         display: 'flex',
         borderRadius: '5px',
+        position: 'fixed',
         padding: "5px",
         backgroundColor: 'rgba(0, 0, 0, 0.2)', // Fondo transparente
         backdropFilter: 'blur(10px)', // Efecto de desenfoque

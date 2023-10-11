@@ -67,7 +67,7 @@ const SlidableDriverInfo = (props) => {
   }
 
   return (
-    <div className="bg-[#213541] w-[0%] h-full right-0 fixed top-0 z-[33] overflow-y-auto" id={`slidable-driver-info${props.number}`}
+    <div className="bg-[#213541] w-[0%] h-full right-0 fixed top-0 z-[35] overflow-y-auto" id={`slidable-driver-info${props.number}`}
       key={props.number}>
       <div key={props.number}>
         <Image
