@@ -7,6 +7,11 @@ const AirportsFooter = () => {
 
   return (
     <I18nextProvider i18n={i18nfile}>
+      <button className="rounded-lg fixed bottom-12 right-12 bg-[#72b5df] z-[34] px-3 py-3">
+        <p>
+          <a href="/contact" target="_blank" className="text-[#1e1d24]">contact us</a>
+        </p>
+      </button>
       <div className="bg-[#003d71] flex flex-col z-[34] pt-2 experience_footer fixed w-screen bottom-0">
         <div className="flex flex-row justify-between pl-14 pb-2 items-end">
           <div className="flex flex-row items-end">
@@ -28,7 +33,7 @@ const AirportsFooter = () => {
               <a href="https://www.youtube.com/channel/UCL1EYtcfz4JvHg6FqUvvfTQ" target="_blank" className="row_text_big pr-10">Youtube</a>
             </p>
 
-            <Languages/>
+            <Languages />
           </div>
         </div>
       </div>
