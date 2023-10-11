@@ -7,7 +7,7 @@ const AirportsFooter = () => {
 
   return (
     <I18nextProvider i18n={i18nfile}>
-      <div className="bg-[#003d71] flex flex-col z-[34] pt-2 experience_footer sticky w-screen bottom-0">
+      <div className="bg-[#003d71] flex flex-col z-[34] pt-2 experience_footer fixed w-screen bottom-0">
         <div className="flex flex-row justify-between pl-14 pb-2 items-end">
           <div className="flex flex-row items-end">
             <h3 className="row_text_small">{t("footer-credits")}</h3>

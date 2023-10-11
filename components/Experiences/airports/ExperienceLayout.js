@@ -11,7 +11,6 @@ const ExperienceLayout = ({ children }) => {
                 className={'text-white relative'}
             >
                 <HeaderExperience/>
-                <WebGiViewer/>
                 {children}
                 <AirportsFooter />
             </div>

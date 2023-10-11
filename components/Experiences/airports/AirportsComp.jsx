@@ -19,7 +19,7 @@ const AirportsComp = () => {
 
     return (
         <I18nextProvider i18n={i18nfile}>
-        <div className="h-[100vh] flex flex-col justify-between z-[200]" id="airports-comp">
+        <div className="h-[100vh] flex flex-col justify-between z-[200] scroll-smooth" id="airports-comp">
         <div className="flex flex-col justify-between items-center h-screen">
             <div className="text-center pt-[4rem] z-[11]">
                 <h1 className="text-7xl experience_title">{t('header-airport')}</h1>

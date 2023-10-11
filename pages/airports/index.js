@@ -78,6 +78,7 @@ export default function Airports() {
         <main data-scroll-container>
           <Plexus isStart={false} />
           <ProgressBar />
+          <WebGiViewer/>
 
           {/* <HeaderExperience />
         <AirportsFooter /> */}
