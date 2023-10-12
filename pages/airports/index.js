@@ -75,44 +75,44 @@ export default function Airports() {
   return (
     <>
       <LoadingScreen isVisible={!isWebGiViewerLoaded} />
-        <main data-scroll-container>
-          <Plexus isStart={false} />
-          <ProgressBar />
-          <WebGiViewer/>
+      <main data-scroll-container>
+        <Plexus isStart={false} />
+        <ProgressBar />
+        <WebGiViewer />
 
-          {/* <HeaderExperience />
+        {/* <HeaderExperience />
         <AirportsFooter /> */}
-          <section data-scroll-section>
-            <AirportsComp />
-          </section>
-          <section className="panel h-full" data-scroll-section>
-            <SlidableController>
-              <DriverOne />
-              <PlusButton number={1}
-                right="left-[17%]"
-                top="top-[15%]"
-                title={t('airport-driver1-title')}
-                titlesize='text-[4.5vh]'
-                clicktext={t('click')} />
-              <SlidableDriverInfo number={1}
-                title={t('airport-driver1-title-sidebar')}
-                text={t('airport-driver1-text-sidebar')}
-                text2={t('airport-driver1-text-sidebar2')} />
-            </SlidableController>
-          </section>
-          {/*SlidableDriverInfo affects the layout of the next element, so we have to let an empty div here in order to avoid the bug */}
-          <div>
-            <DispelModel />
-          </div>
-          <div className="w-screen flex items-center text-left">
-            <h1 className="text-[300%] relative z-[11] w-full pb-5 mb-10 ml-20">
-              {t("airport-driver2-title-safety")}
-            </h1>
-          </div>
-          <section className="panel h-full">
-            <SlidableController>
-              <DriverInsights />
-              {/* <PlusButton number={2}
+        <section data-scroll-section className="panel h-full">
+          <AirportsComp />
+        </section>
+        <section className="panel h-full" data-scroll-section>
+          <SlidableController>
+            <DriverOne />
+            <PlusButton number={1}
+              right="left-[17%]"
+              top="top-[15%]"
+              title={t('airport-driver1-title')}
+              titlesize='text-[4.5vh]'
+              clicktext={t('click')} />
+            <SlidableDriverInfo number={1}
+              title={t('airport-driver1-title-sidebar')}
+              text={t('airport-driver1-text-sidebar')}
+              text2={t('airport-driver1-text-sidebar2')} />
+          </SlidableController>
+        </section>
+        {/*SlidableDriverInfo affects the layout of the next element, so we have to let an empty div here in order to avoid the bug */}
+        <div>
+          <DispelModel />
+        </div>
+        <div className="w-screen flex items-center text-left">
+          <h1 className="text-[300%] relative z-[11] w-full pb-5 mb-10 ml-20">
+            {t("airport-driver2-title-safety")}
+          </h1>
+        </div>
+        <section className="panel h-full mb-60">
+          <SlidableController>
+            <DriverInsights />
+            {/* <PlusButton number={2}
               right="right-[-50%]"
               top="top-[65%]"
               title={t('airport-driver1-title2')}
@@ -124,74 +124,75 @@ export default function Airports() {
               text={t('airport-slidable-texto1')}
               text2={t('airport-slidable-texto2')}
             /> */}
-            </SlidableController>
-          </section>
-          <>
-            <section className="panel h-full">
-              <SlidableController>
-                <div className="bhs h-screen">
+          </SlidableController>
+        </section>
 
-                  <PlusButton number={3}
-                    right="left-[9%]"
-                    top="top-[30%]"
-                    title={t("airport-driver2-title")}
-                    titlesize='text-[4.5vh]'
-                    clicktext={t('click')} />
+        <section className="panel h-full">
+          <SlidableController>
+            <div className="bhs h-screen mb-60">
 
-                  <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
-                    text={t('airport-slidable-texto3')}
-                    text2={t('airport-slidable-texto4')}
-                  />
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] mb-26"
-                  >
-                    <source src='/videos/9controlroom.mp4' type="video/mp4" />
-                    Tu navegador no soporta la reproducción de videos.
-                  </video>
-                </div>
-              </SlidableController>
-              <DriverOneFunctions />
-            </section>
-          </>
-          <section className="panel h-full">
-            <SlidableController>
-              <Closing />
-              <PlusButton number={4}
+              <PlusButton number={3}
                 right="left-[9%]"
-                top="top-[13%]"
-                title={t("closing-title")}
+                top="top-[30%]"
+                title={t("airport-driver2-title")}
                 titlesize='text-[4.5vh]'
                 clicktext={t('click')} />
-              <SlidableDriverInfo number={4} title="Conjunto de soluciones del BHS de llegadas"
-                titlelist={t('bhs-solution-title1')}
-                textlist={t('bhs-solution-text1')}
-                titlelist2={t('bhs-solution-title2')}
-                textlist2={t('bhs-solution-text2')}
-                titlelist3={t('bhs-solution-title3')}
-                textlist3={t('bhs-solution-text3')}
-                titlelist4={t('bhs-solution-title4')}
-                textlist4={t('bhs-solution-text4')}
-                titlelist5={t('bhs-solution-title5')}
-                textlist5={t('bhs-solution-text5')}
-                titlelist6={t('bhs-solution-title6')}
-                textlist6={t('bhs-solution-text6')}
-                titlelist7={t('bhs-solution-title7')}
-                textlist7={t('bhs-solution-text7')}
-              />
-            </SlidableController>
-            {/* <ModelsInteractive /> */}
-          </section>
-          <section className="panel h-full">
-            <GuardianConcept />
-          </section>
-          <section className="panel h-full">
-            <GalleryAirports />
-          </section>
 
-        </main>
+              <SlidableDriverInfo number={3} title={t('airport-slidable-title3')}
+                text={t('airport-slidable-texto3')}
+                text2={t('airport-slidable-texto4')}
+              />
+              <video
+                autoPlay
+                loop
+                muted
+                className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] mb-26"
+              >
+                <source src='/videos/9controlroom.mp4' type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+              </video>
+            </div>
+          </SlidableController>
+        </section>
+        <section className="panel h-full mb-60">
+          <DriverOneFunctions />
+        </section>
+        <section className="panel h-full mb-60">
+          <SlidableController>
+            <Closing />
+            <PlusButton number={4}
+              right="left-[9%]"
+              top="top-[13%]"
+              title={t("closing-title")}
+              titlesize='text-[4.5vh]'
+              clicktext={t('click')} />
+            <SlidableDriverInfo number={4} title="Conjunto de soluciones del BHS de llegadas"
+              titlelist={t('bhs-solution-title1')}
+              textlist={t('bhs-solution-text1')}
+              titlelist2={t('bhs-solution-title2')}
+              textlist2={t('bhs-solution-text2')}
+              titlelist3={t('bhs-solution-title3')}
+              textlist3={t('bhs-solution-text3')}
+              titlelist4={t('bhs-solution-title4')}
+              textlist4={t('bhs-solution-text4')}
+              titlelist5={t('bhs-solution-title5')}
+              textlist5={t('bhs-solution-text5')}
+              titlelist6={t('bhs-solution-title6')}
+              textlist6={t('bhs-solution-text6')}
+              titlelist7={t('bhs-solution-title7')}
+              textlist7={t('bhs-solution-text7')}
+            />
+          </SlidableController>
+          {/* <ModelsInteractive /> */}
+        </section>
+        <section className="panel h-full mb-60">
+          <GuardianConcept />
+        </section>
+        <section className="panel h-full">
+          <GalleryAirports />
+        </section>
+
+      </main>
     </>
   )
 }

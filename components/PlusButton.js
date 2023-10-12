@@ -137,7 +137,7 @@ const PlusButton = (props) => {
               />
             </div>
           </div>
-          <h2 className={`z-[11] relative ml-4 ${props.titlesize} ${props.number == 3 ? "bg-[#003b71] bg-opacity-50": "bg-transparent"}`} id={`button-title${props.number}`}>
+          <h2 className={`z-[12] opacity-0 relative ml-4 ${props.titlesize} ${props.number == 3 ? "bg-[#003b71] bg-opacity-50": "bg-transparent"}`} id={`button-title${props.number}`}>
             {props.title}
           </h2>
         </div>
