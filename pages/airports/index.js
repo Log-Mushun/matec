@@ -121,9 +121,9 @@ export default function Airports() {
           </SlidableController>
         </section>
 
-        <section className="panel ">
+        <section className="panel">
           <SlidableController>
-            <div className="bhs h-screen relative">
+            <div className="bhs relative">
 
               <PlusButton number={3}
                 right="left-[9%]"
@@ -140,7 +140,7 @@ export default function Airports() {
                 autoPlay
                 loop
                 muted
-                className="w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
+                className="w-screen z-[11]"
               >
                 <source src='/videos/9controlroom.mp4' type="video/mp4" />
                 Tu navegador no soporta la reproducción de videos.

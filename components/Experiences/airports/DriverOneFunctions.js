@@ -1,17 +1,32 @@
+import React, { useRef, useEffect } from 'react';
 import FunctionsText from "./FunctionsText";
 import VideoComponent from "@/components/VideoComponent";
 import { motion } from "framer-motion"
 
 const DriverOneFunctions = () => {
+  const videoRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current && containerRef.current) {
+      // Obtén la altura del video
+      const videoHeight = videoRef.current.offsetHeight;
+
+      // Establece la altura del contenedor principal según la altura del video
+      containerRef.current.style.height = `${videoHeight}px`;
+    }
+  }, []);
+
   return (
-    <div className="h-screen text-right pr-40 relative" id='driverone-functions'>
+    <div className="text-right pr-40 relative" id='driverone-functions' ref={containerRef}>
       <FunctionsText />
       <div>
         <video
           autoPlay
           loop
           muted
-          className="w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
+          className="w-screen absolute object-fit top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
+          ref={videoRef}
         >
           <source src='/videos/4cbra.mp4' type="video/mp4" />
           Tu navegador no soporta la reproducción de videos.

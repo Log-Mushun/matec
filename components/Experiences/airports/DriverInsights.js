@@ -62,7 +62,7 @@ const DriverInsights = () => {
   return (
     <I18nextProvider i18n={i18nfile}>
 
-      <div className="text-right relative" id="driver-insights">
+      <div className="text-right relative h-full" id="driver-insights">
         <div className='driver-insightsclass opacity-0 z-[33] absolute w-[50vw] pl-[4%] pr-[3%] top-1/2 transform -translate-y-1/2'>
         <h1 className='text-left pb-6 text-[7vh] z-[32] w-[100vw]'>{t('airport-driver2-title-safety')}</h1>
           <div className='flex h-[1vh] mb-4'>
@@ -91,7 +91,7 @@ const DriverInsights = () => {
             ))}
           </div>
         </div>
-        <div className='h-[100vh] relative'>
+        <div className='relative'>
           <VideoComponent videoIndex={index} isFunctions={1} />
         </div>
       </div>

@@ -49,7 +49,7 @@ function Languages() {
         }} >
         {i18n.language == 'pt' ?
           (<>
-            <PT title="Portuguese" style={{ width: '2rem', marginRight: '0.5rem' }} onClick={() => {
+            <PT title="Portuguese" className='w-[1.5rem] mr-[0.5rem] pt-[0.2rem]' onClick={() => {
               if (!open) {
                 setOpen(true)
               }
@@ -58,7 +58,7 @@ function Languages() {
           </>)
           : i18n.language == 'es' ?
             (<>
-              <ES title="Spanish" style={{ width: '2rem', marginRight: '0.5rem' }} onClick={() => {
+              <ES title="Spanish" className='w-[1.5rem] mr-[0.5rem] pt-[0.2rem]' onClick={() => {
                 if (!open) {
                   setOpen(true)
                 }
@@ -67,7 +67,7 @@ function Languages() {
             </>)
             : i18n.language == 'cn' ?
               (<>
-                <CN title="Mandarin" style={{ width: '2rem', marginRight: '0.5rem' }} onClick={() => {
+                <CN title="Mandarin" className='w-[1.5rem] mr-[0.5rem] pt-[0.2rem]' onClick={() => {
                   if (!open) {
                     setOpen(true)
                   }
@@ -76,7 +76,7 @@ function Languages() {
               </>)
               : i18n.language == 'fr' ?
                 (<>
-                  <FR title="French" style={{ width: '2rem', marginRight: '0.5rem' }} onClick={() => {
+                  <FR title="French" className='w-[1.5rem] mr-[0.5rem] pt-[0.2rem]' onClick={() => {
                     if (!open) {
                       setOpen(true)
                     }
@@ -85,7 +85,7 @@ function Languages() {
                 </>)
                 : i18n.language == 'de' ?
                   (<>
-                    <DE title="Deutch" style={{ width: '2rem', marginRight: '0.5rem' }} onClick={() => {
+                    <DE title="Deutch" className='w-[1.5rem] mr-[0.5rem] pt-[0.2rem]' onClick={() => {
                       if (!open) {
                         setOpen(true)
                       }
@@ -94,7 +94,7 @@ function Languages() {
                   </>)
                   :
                   (<>
-                    <US title="English" style={{ width: '2rem', marginRight: '0.5rem' }} onClick={() => {
+                    <US title="English" className='w-[1.5rem] mr-[0.5rem] pt-[0.2rem]' onClick={() => {
                       if (!open) {
                         setOpen(true)
                       }

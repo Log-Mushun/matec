@@ -37,7 +37,7 @@ const VideoComponent = (props) => {
 
   return (
     <>
-      <div> {/* Establecer la altura del div */}
+      <div style={{ height: videoHeight }}>
         <div className='bg-[#121521] bg-opacity-70 absolute w-[53%] z-[15] top-1/2 transform -translate-y-1/2' style={{ height: videoHeight }} />
         <motion.video
           autoPlay
