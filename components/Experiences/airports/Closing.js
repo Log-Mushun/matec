@@ -45,7 +45,7 @@ const Closing = () => {
           autoPlay
           loop
           muted
-          className="w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] object-fill"
+          className="absolute z-[11] object-fill"
           ref={videoRef}
         >
           <source src='/videos/8checkout.mp4' type="video/mp4" />
