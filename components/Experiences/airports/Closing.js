@@ -22,7 +22,7 @@ const Closing = () => {
 
   return (
     <I18nextProvider i18n={i18nfile}>
-      <div className='flex items-center' id="closing" ref={containerRef}>
+      <div className='flex items-center relative' id="closing" ref={containerRef}>
         <div className='container mx-auto z-[11]'>
           <div className='flex flex-col xl:flex-row gap-x-8'>
             {/* text */}

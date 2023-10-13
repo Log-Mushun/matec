@@ -25,7 +25,7 @@ const DriverOneFunctions = () => {
           autoPlay
           loop
           muted
-          className="top-0 w-screen absolute object-fill z-[11]"
+          className="top-0 absolute object-fill z-[11]"
           ref={videoRef}
         >
           <source src='/videos/4cbra.mp4' type="video/mp4" />
