@@ -18,6 +18,7 @@ const SlidableDriverInfo = (props) => {
   var buttonTitle1;
   var buttonTitle2;
   var buttonTitle3;
+  var buttonTitle4;
   var driverOneFunctions;
 
   const closeFunction = () => {
@@ -44,6 +45,10 @@ const SlidableDriverInfo = (props) => {
         gsap.to(driverOneFunctions, { opacity: 1, duration: 0.5 });
         gsap.to(buttonTitle3, { opacity: 1, duration: 0.5 });
       }
+      
+      if (props.number == 4) {
+        gsap.to(buttonTitle4, { opacity: 1, duration: 0.5 });
+      }
 
     }
   };
@@ -64,6 +69,8 @@ const SlidableDriverInfo = (props) => {
 
     driverOneFunctions = document.getElementById("driverone-functions");
     buttonTitle3 = document.getElementById("button-title3");
+
+    buttonTitle4 = document.getElementById("button-title4");
   }
 
   return (
