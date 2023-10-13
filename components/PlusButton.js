@@ -126,7 +126,7 @@ const PlusButton = (props) => {
       <div className={`absolute w-full h-full ${props.right} ${props.top}`}>
         <div className="flex flex-row z-1 items-center">
           <div>
-            <h3 className={`z-[11] relative plus-button${props.number} opacity-0`}>{props.clicktext}</h3>
+
             <div
               className={`flex items-center justify-center w-24 h-24 relative cursor-pointer opacity-0 plus-button${props.number}`}
               id={`plus-button${props.number}`}
@@ -148,6 +148,7 @@ const PlusButton = (props) => {
                 className="absolute"
               />
             </div>
+                        <h3 className={`z-[11] relative plus-button${props.number} opacity-0`}>{props.clicktext}</h3>
           </div>
           <h2 className={`z-[12] relative opacity-0 ml-4 ${props.titlesize} ${props.number == 3 ? "bg-[#121521] bg-opacity-70 px-5": "bg-transparent"}`} id={`button-title${props.number}`}>
             {props.title}
