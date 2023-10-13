@@ -63,11 +63,11 @@ const DriverInsights = () => {
     <I18nextProvider i18n={i18nfile}>
 
       <div className="text-right relative" id="driver-insights">
-        <div className='driver-insightsclass opacity-0 z-[33] absolute w-[40vw] pl-[4%] pr-[3%] top-1/2 transform -translate-y-1/2'>
-        <h1 className='text-left pb-6 text-[7vh] z-[32]'>{t('airport-driver2-title-safety')}</h1>
+        <div className='driver-insightsclass opacity-0 z-[33] absolute w-[50vw] pl-[4%] pr-[3%] top-1/2 transform -translate-y-1/2'>
+        <h1 className='text-left pb-6 text-[7vh] z-[32] w-[100vw]'>{t('airport-driver2-title-safety')}</h1>
           <div className='flex h-[1vh] mb-4'>
             {driverData.map((item, itemIndex) => (
-              <div key={itemIndex} className='w-[60vw]'>
+              <div key={itemIndex} className='w-[10vw]'>
                 <div
                   key={itemIndex}
                   className={`cursor-pointer left-0 w-[7vw] h-[1vh] ${itemIndex === index ? 'bg-white' : 'bg-[#b2cde0]'} hover:bg-white transition-colors duration-200`}
@@ -79,7 +79,7 @@ const DriverInsights = () => {
           <div>
             {driverData[index].info.map((item, itemIndex) => (
               <div key={itemIndex} className='flex-1 flex flex-col md:flex-col max-w-max gap-x-2 items-start text-white'>
-                <div className='font-light mb-2 md:mb-0 text-start'>
+                <div className='mb-2 md:mb-0 text-start w-[70%]'>
                   <h1 className='text-[200%]'>
                     {driverData[index].title}
                   </h1>
@@ -93,7 +93,6 @@ const DriverInsights = () => {
         </div>
         <div className='h-[100vh] relative'>
           <VideoComponent videoIndex={index} isFunctions={1} />
-          <div className='bg-[#121521] bg-opacity-70 absolute w-[50%] h-[80%] z-[15] top-1/2 transform -translate-y-1/2' />
         </div>
       </div>
     </I18nextProvider>

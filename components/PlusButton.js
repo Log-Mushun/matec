@@ -84,7 +84,7 @@ const PlusButton = (props) => {
         gsap.to(buttonTitle3, { opacity: 1, duration: 0.5 });
       }
 
-      
+
       if (props.number == 4) {
         gsap.to(buttonTitle4, { opacity: 1, duration: 0.5 });
       }
@@ -148,9 +148,9 @@ const PlusButton = (props) => {
                 className="absolute"
               />
             </div>
-                        <h3 className={`z-[11] relative plus-button${props.number} opacity-0`}>{props.clicktext}</h3>
+            <h3 className={`z-[11] text-center relative plus-button${props.number} opacity-0`}>{props.clicktext}</h3>
           </div>
-          <h2 className={`z-[12] relative opacity-0 ml-4 ${props.titlesize} ${props.number == 3 ? "bg-[#121521] bg-opacity-70 px-5": "bg-transparent"}`} id={`button-title${props.number}`}>
+          <h2 className={`z-[12] relative opacity-0 ml-4 ${props.titlesize} ${props.number == 3 ? "bg-[#121521] bg-opacity-70 px-5" : "bg-transparent"}`} id={`button-title${props.number}`}>
             {props.title}
           </h2>
         </div>
