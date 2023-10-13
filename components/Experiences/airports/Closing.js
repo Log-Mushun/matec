@@ -22,7 +22,7 @@ const Closing = () => {
 
   return (
     <I18nextProvider i18n={i18nfile}>
-      <div className='h-full flex items-center' id="closing" ref={containerRef}>
+      <div className='flex items-center' id="closing" ref={containerRef}>
         <div className='container mx-auto z-[11]'>
           <div className='flex flex-col xl:flex-row gap-x-8'>
             {/* text */}
@@ -45,7 +45,7 @@ const Closing = () => {
           autoPlay
           loop
           muted
-          className="w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] object-fit"
+          className="w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] object-fill"
           ref={videoRef}
         >
           <source src='/videos/8checkout.mp4' type="video/mp4" />

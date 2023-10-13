@@ -140,7 +140,7 @@ export default function Airports() {
                 autoPlay
                 loop
                 muted
-                className="w-screen z-[11]"
+                className="w-screen z-[11] object-fill"
               >
                 <source src='/videos/9controlroom.mp4' type="video/mp4" />
                 Tu navegador no soporta la reproducción de videos.
