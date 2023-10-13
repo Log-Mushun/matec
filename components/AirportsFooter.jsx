@@ -7,7 +7,7 @@ const AirportsFooter = () => {
 
   return (
     <I18nextProvider i18n={i18nfile}>
-      <button className="rounded-lg fixed bottom-12 right-12 bg-[#72b5df] z-[34] px-3 py-3">
+      <button className="rounded-lg fixed bottom-12 left-12 bg-[#72b5df] border-white border-2 z-[34] px-3 py-3">
         <p>
           <a href="/contact" target="_blank" className="text-[#1e1d24]">contact us</a>
         </p>
@@ -15,9 +15,9 @@ const AirportsFooter = () => {
       <div className="bg-[#003d71] flex flex-col z-[34] pt-2 experience_footer fixed w-screen bottom-0">
         <div className="flex flex-row justify-between pl-14 pb-2 items-end">
           <div className="flex flex-row items-end">
-            <h3 className="row_text_small">{t("footer-credits")}</h3>
-            <h3 className="row_text_small">{t("footer-privacy")}</h3>
-            <h3 className="row_text_small">{t("footer-cookies")}</h3>
+            <p className="row_text_small">{t("footer-credits")}</p>
+            <p className="row_text_small">{t("footer-privacy")}</p>
+            <p className="row_text_small">{t("footer-cookies")}</p>
           </div>
           <div className="flex flex-row pr-12 right-5 items-end">
             <p>

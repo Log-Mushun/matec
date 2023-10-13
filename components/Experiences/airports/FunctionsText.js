@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import VideoComponent from "@/components/VideoComponent";
 import { I18nextProvider, useTranslation } from "react-i18next";
-import {i18n as i18nfile} from "../../../i18n";
+import { i18n as i18nfile } from "../../../i18n";
 
 const FunctionsText = () => {
     const [index, setIndex] = useState(0);
@@ -22,8 +21,9 @@ const FunctionsText = () => {
 
     return (
         <>
-            <div className='z-[32] relative functions-text flex flex-col justify-center py-[5%] bg-[#003b71] w-screen bg-opacity-50'>
-                <div className='w-full flex flex-row pl-28 pt-10'>
+            <div className='relative functions-text flex flex-col justify-center py-[5%] w-screen'>
+                <div className="bg-[#121521] bg-opacity-70 h-[40vh] w-[100vw] absolute top-[30%] z-[14]"/>
+                <div className='w-full flex flex-row mt-20 pl-28 z-[32]'>
                     {buttons.map((button, index) => (
                         <div
                             key={index}
@@ -32,7 +32,7 @@ const FunctionsText = () => {
                         ></div>
                     ))}
                 </div>
-                <div className='flex-1 flex flex-col md:flex-col max-w-max gap-x-2 items-start text-white w-[30%]'>
+                <div className='flex-1 flex flex-col md:flex-col max-w-max gap-x-2 items-start text-white w-[30%] z-[15]'>
                     <div className='mb-2 md:mb-0 flex flex-row w-screen justify-around px-20'>
                         {buttons.map((button, index) => (
                             <div key={index} className={`flex flex-col items-start text-left ${index === selectedIndex ? 'opacity-100' : 'opacity-25'} w-[40%] transition-opacity duration-300`}>

@@ -21,6 +21,7 @@ import GuardianConcept from "../../components/Experiences/airports/GuardianConce
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { i18n as i18nfile } from "../../i18n";
@@ -38,9 +39,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Airports() {
   const [isWebGiViewerLoaded, setIsWebGiViewerLoaded] = useState(false);
-
   const { t, i18n } = useTranslation();
-
 
   useEffect(() => {
 
@@ -104,12 +103,7 @@ export default function Airports() {
         <div>
           <DispelModel />
         </div>
-        <div className="w-screen flex items-center text-left">
-          <h1 className="text-[300%] relative z-[11] w-full pb-5 mb-10 ml-20">
-            {t("airport-driver2-title-safety")}
-          </h1>
-        </div>
-        <section className="panel h-full mb-60">
+        <section className="panel h-full mb-20">
           <SlidableController>
             <DriverInsights />
             {/* <PlusButton number={2}
@@ -129,7 +123,7 @@ export default function Airports() {
 
         <section className="panel h-full">
           <SlidableController>
-            <div className="bhs h-screen mb-60">
+            <div className="bhs h-screen mb-20">
 
               <PlusButton number={3}
                 right="left-[9%]"
@@ -154,15 +148,15 @@ export default function Airports() {
             </div>
           </SlidableController>
         </section>
-        <section className="panel h-full mb-60">
+        <section className="panel h-full mb-20">
           <DriverOneFunctions />
         </section>
-        <section className="panel h-full mb-60">
+        <section className="panel h-full mb-20">
           <SlidableController>
             <Closing />
             <PlusButton number={4}
               right="left-[9%]"
-              top="top-[13%]"
+              top="top-[40%]"
               title={t("closing-title")}
               titlesize='text-[4.5vh]'
               clicktext={t('click')} />
@@ -185,7 +179,7 @@ export default function Airports() {
           </SlidableController>
           {/* <ModelsInteractive /> */}
         </section>
-        <section className="panel h-full mb-60">
+        <section className="panel h-full mb-20">
           <GuardianConcept />
         </section>
         <section className="panel h-full">
