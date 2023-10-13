@@ -81,10 +81,10 @@ export default function Airports() {
 
         {/* <HeaderExperience />
         <AirportsFooter /> */}
-        <section data-scroll-section className="panel h-full">
+        <section data-scroll-section className="panel ">
           <AirportsComp />
         </section>
-        <section className="panel h-full" data-scroll-section>
+        <section className="panel " data-scroll-section>
           <SlidableController>
             <DriverOne />
             <PlusButton number={1}
@@ -103,7 +103,7 @@ export default function Airports() {
         <div>
           <DispelModel />
         </div>
-        <section className="panel h-full mb-20">
+        <section className="panel  ">
           <SlidableController>
             <DriverInsights />
             {/* <PlusButton number={2}
@@ -121,9 +121,9 @@ export default function Airports() {
           </SlidableController>
         </section>
 
-        <section className="panel h-full">
+        <section className="panel ">
           <SlidableController>
-            <div className="bhs h-screen mb-20">
+            <div className="bhs h-screen relative">
 
               <PlusButton number={3}
                 right="left-[9%]"
@@ -140,7 +140,7 @@ export default function Airports() {
                 autoPlay
                 loop
                 muted
-                className="pt-16 w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11] mb-26"
+                className="w-screen absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[11]"
               >
                 <source src='/videos/9controlroom.mp4' type="video/mp4" />
                 Tu navegador no soporta la reproducción de videos.
@@ -148,10 +148,10 @@ export default function Airports() {
             </div>
           </SlidableController>
         </section>
-        <section className="panel h-full mb-20">
+        <section className="panel  ">
           <DriverOneFunctions />
         </section>
-        <section className="panel h-full mb-20">
+        <section className="panel  ">
           <SlidableController>
             <Closing />
             <PlusButton number={4}
@@ -160,7 +160,7 @@ export default function Airports() {
               title={t("closing-title")}
               titlesize='text-[4.5vh]'
               clicktext={t('click')} />
-            <SlidableDriverInfo number={4} title="Conjunto de soluciones del BHS de llegadas"
+            <SlidableDriverInfo number={4} title={t("closing-title-slidable")}
               titlelist={t('bhs-solution-title1')}
               textlist={t('bhs-solution-text1')}
               titlelist2={t('bhs-solution-title2')}
@@ -179,10 +179,10 @@ export default function Airports() {
           </SlidableController>
           {/* <ModelsInteractive /> */}
         </section>
-        <section className="panel h-full mb-20">
+        <section className="panel  ">
           <GuardianConcept />
         </section>
-        <section className="panel h-full">
+        <section className="panel ">
           <GalleryAirports />
         </section>
 

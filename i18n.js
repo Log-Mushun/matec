@@ -72,7 +72,9 @@ const resources = {
       "footer-credits": "Credits",
       "footer-privacy": "Privacy Policy",
       "footer-cookies": "Cookies",
-      "visor-modelos-title": "Our Products"
+      "visor-modelos-title": "Our Products",
+
+      "closing-title-slidable":"Arrivals BHS Solution Set",
     }
   },
 
@@ -147,7 +149,9 @@ const resources = {
     "footer-credits": "Credits",
     "footer-privacy": "Datenschutzrichtlinie",
     "footer-cookies": "Cookies",
-    "visor-modelos-title": "Unsere Produkte"
+    "visor-modelos-title": "Unsere Produkte",
+
+    "closing-title-slidable":"Ankunfts-BHS-Lösungsset",
   }
 },
 cn: {
@@ -220,7 +224,9 @@ cn: {
     "footer-credits": "制作人员",
     "footer-privacy": "隐私政策",
     "footer-cookies": "Cookie",
-    "visor-modelos-title": "我们的产品"
+    "visor-modelos-title": "我们的产品",
+
+    "closing-title-slidable":"到达BHS解决方案集",
   }
 },
 fr: {
@@ -293,7 +299,9 @@ fr: {
     "footer-credits": "Crédits",
     "footer-privacy": "Politique de confidentialité",
     "footer-cookies": "Cookies",
-    "visor-modelos-title": "Nos produits"
+    "visor-modelos-title": "Nos produits",
+
+    "closing-title-slidable":"Ensemble de solutions BHS d'arrivées",
   }
 },
   pt: {
@@ -353,7 +361,9 @@ fr: {
       "footer-credits": "Créditos",
       "footer-privacy": "Política de Privacidade",
       "footer-cookies": "Cookies",
-      "visor-modelos-title": "Nossos Produtos"
+      "visor-modelos-title": "Nossos Produtos",
+
+      "closing-title-slidable":"Conjunto de soluções BHS de chegadas",
     }
   },  
   es: {
@@ -428,9 +438,9 @@ fr: {
       "footer-credits": "Creditos",
       "footer-privacy": "Política de privacidad",
       "footer-cookies": "Cookies",
-      "visor-modelos-title": "Nuestros productos"
+      "visor-modelos-title": "Nuestros productos",
 
-
+      "closing-title-slidable":"Conjunto de soluciones del BHS de llegadas",
 
     }
   }
