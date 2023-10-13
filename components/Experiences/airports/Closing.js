@@ -21,38 +21,17 @@ const Closing = () => {
   }, []);
 
   return (
-    <I18nextProvider i18n={i18nfile}>
-      <div className='flex items-center relative' id="closing" ref={containerRef}>
-        <div className='container mx-auto z-[11]'>
-          <div className='flex flex-col xl:flex-row gap-x-8'>
-            {/* text */}
-            <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
-              <p className='mb-4 mx-auto max-w-[80%] lg:mx-0 text-[90%]'>
-                {t("closing-text1")}
-              </p>
-              <p className='mb-4 mx-auto max-w-[80%] lg:mx-0 text-[90%]'>
-                {t("closing-text2")}
-              </p>
-            </div>
-
-            {/* slider */}
-            <div className='w-full xl:max-w-[65%]'>
-              {/* Your slider component or content */}
-            </div>
-          </div>
-        </div>
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute z-[11] object-fill"
-          ref={videoRef}
-        >
-          <source src='/videos/8checkout.mp4' type="video/mp4" />
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-      </div>
-    </I18nextProvider>
+    <div className="relative" id="closing">
+      <video
+        autoPlay
+        loop
+        muted
+        className="w-screen z-[11] object-fill"
+      >
+        <source src='/videos/8checkout.mp4' type="video/mp4" />
+        Tu navegador no soporta la reproducción de videos.
+      </video>
+    </div>
   );
 };
 
