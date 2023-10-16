@@ -1,59 +1,146 @@
-'use client'
+import {
+  Button,
+  Container,
+  FormControl,
+  FormErrorMessage,
+  FormLabel,
+  Heading,
+  Input,
+  Text,
+  Textarea,
+  useToast,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import { sendContactForm } from "@/lib/api"; 
 
-// components
-import Circles from '/components/Circles';
+const initValues = { name: "", email: "", subject: "", message: "" };
 
-// icons
-import { BsArrowRight } from 'react-icons/bs';
+const initState = { isLoading: false, error: "", values: initValues };
 
-// framer
-import { motion } from 'framer-motion';
+export default function Home() {
+  const toast = useToast();
+  const [state, setState] = useState(initState);
+  const [touched, setTouched] = useState({});
 
-// variants
-import { fadeIn } from '../../variants';
+  const { values, isLoading, error } = state;
 
-const Contact = () => {
+  const onBlur = ({ target }) =>
+    setTouched((prev) => ({ ...prev, [target.name]: true }));
+
+  const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
+    }
+  };
+
   return (
-    <div className='h-screen bg-gradient-radial-b'>
-      <div className='container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full'>
-        {/* text & form */}
-        <div className='flex flex-col w-full max-w-[700px]'>
-          {/* text */}
-          <motion.h2
-            variants={fadeIn('up', 0.2)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='h2 text-center mb-12'
-          >
-            Let's <span className='text-accent'>connect.</span>
-          </motion.h2>
-          {/* form */}
-          <motion.form
-            variants={fadeIn('up', 0.4)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='flex-1 flex flex-col gap-6 w-full mx-auto'
-          >
-            {/* input group */}
-            <div className='flex gap-x-6 w-full'>
-              <input type='text' placeholder='name' className='input' />
-              <input type='text' placeholder='email' className='input' />
-            </div>
-            <input type='text' placeholder='subject' className='input' />
-            <textarea placeholder='message' className='textarea'></textarea>
-            <button className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group' type='submit'>
-              <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>
-                Send
-              </span>
-              <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
-            </button>
-          </motion.form>
-        </div>
-      </div>
-    </div>
-  );
-};
+    <Container maxW="450px" className="bg-black" mt={12}>
+      <Heading>Contact</Heading>
+      {error && (
+        <Text color="red.300" my={4} fontSize="xl">
+          {error}
+        </Text>
+      )}
 
-export default Contact;
+      <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
+        <FormLabel>Name</FormLabel>
+        <Input
+          type="text"
+          name="name"
+          errorBorderColor="red.300"
+          value={values.name}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
+        <FormLabel>Email</FormLabel>
+        <Input
+          type="email"
+          name="email"
+          errorBorderColor="red.300"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <FormControl
+        mb={5}
+        isRequired
+        isInvalid={touched.subject && !values.subject}
+      >
+        <FormLabel>Subject</FormLabel>
+        <Input
+          type="text"
+          name="subject"
+          errorBorderColor="red.300"
+          value={values.subject}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <FormControl
+        isRequired
+        isInvalid={touched.message && !values.message}
+        mb={5}
+      >
+        <FormLabel>Message</FormLabel>
+        <Textarea
+          type="text"
+          name="message"
+          rows={4}
+          errorBorderColor="red.300"
+          value={values.message}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+        <FormErrorMessage>Required</FormErrorMessage>
+      </FormControl>
+
+      <Button
+        variant="outline"
+        colorScheme="blue"
+        isLoading={isLoading}
+        disabled={
+          !values.name || !values.email || !values.subject || !values.message
+        }
+        onClick={onSubmit}
+      >
+        Submit
+      </Button>
+    </Container>
+  );
+}
