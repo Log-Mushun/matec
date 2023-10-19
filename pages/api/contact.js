@@ -2,6 +2,7 @@ import { mailOptions, transporter } from "../../config/nodemailer";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
+  number: "Mobile Phone",
   email: "Email",
   subject: "Subject",
   message: "Message",
