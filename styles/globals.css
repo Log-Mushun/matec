@@ -78,6 +78,10 @@ h1,h2,h3 {
     font-family: 'FuturaHvBTHeavy', sans-serif;
 }
 
+.bold-text{
+  font-family: 'FuturaHvBTHeavy', sans-serif;
+}
+
 p,h4 {
   font-family: 'FuturaMedium', sans-serif;
 }

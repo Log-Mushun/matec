@@ -1,240 +1,205 @@
-import React, { useState } from 'react';
+import Image from "next/image";
+import { useEffect } from "react";
+import { LuMailOpen } from "react-icons/lu"
+import { motion } from "framer-motion"
+import { fadeIn } from "@/variants";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// icons
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from 'react-icons/fa';
-
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from 'react-icons/si';
-
-//  about data
-export const aboutData = [
-  {
-    title: 'skills',
-    info: [
-      {
-        title: 'Web Development',
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
-        ],
-      },
-      {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
-  {
-    title: 'experience',
-    info: [
-      {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
-      },
-      {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
-      },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
-    ],
-  },
-];
-
-// components
-import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
-
-// framer motion
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
-
-// counter
-import CountUp from 'react-countup';
-
+gsap.registerPlugin(ScrollTrigger);
 const About = () => {
-  const [index, setIndex] = useState(0);
-  console.log(index);
+  useEffect(() => {
+    document.body.style.overflowY = 'auto';
+    animateElements();
+  })
+
+  const animateElements = () => {
+    const web02Img = document.querySelector('#image-container-web02');
+    const web03Img = document.querySelector('#image-container-web03');
+    const title2 = document.querySelector('#title2');
+    const title3 = document.querySelector('#title3');
+    const description2 = document.querySelector('#desc2');
+    const description3 = document.querySelector('#desc3');
+    const container3 = document.querySelector('#container3');
+
+    gsap.to(web02Img, {
+      x: -20,
+      scrollTrigger: {
+        trigger: '.section2',
+        start: 'top bottom',
+        end: 'top top',
+        scrub: 2,
+        delay: 1
+      }
+    })
+
+    gsap.to(web03Img, {
+      x: -20,
+      scrollTrigger: {
+        trigger: '.section3',
+        start: 'top bottom',
+        end: 'top top',
+        scrub: 2,
+        delay: 1
+      }
+    })
+
+    gsap.to(title2, {
+      y: -20,
+      delay: 1,
+      scrollTrigger: {
+        trigger: '.section2',
+        start: 'top bottom', 
+        end: 'top top', 
+        scrub: 2,
+      }
+    })
+    gsap.to(title3, {
+      opacity: 1,
+      delay: 1,
+      scrollTrigger: {
+        trigger: '.section3',
+        start: 'top-=200 top', 
+        end: 50, 
+        scrub: 2,
+      }
+    })
+
+    gsap.to(description2, {
+      opacity: 1,
+      y: -10,
+      scrollTrigger: {
+        trigger: '.section2',
+        start: 'top bottom',
+        end: 'top top', 
+        scrub: 2,
+      }
+    })
+    gsap.to(description3, {
+      opacity: 1,
+      delay: 1,
+      scrollTrigger: {
+        trigger: '.section3',
+        start: 'top-=150 top', 
+        end: 50, 
+        scrub: 2,
+      }
+    })
+
+    gsap.to(container3, {
+      opacity: 1,
+      delay: 3,
+      scrollTrigger: {
+        trigger: '.section3',
+        start: 'top-=100 top', 
+        end: 90, 
+        scrub: 5,
+      }
+    })
+
+    
+
+  }
+
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
-      <Circles />
-      {/* avatar img */}
-      <motion.div
-        variants={fadeIn('right', 0.2)}
-        initial='hidden'
-        animate='show'
-        exit='hidden'
-        className='hidden xl:flex absolute bottom-0 -left-[370px]'
-      >
-        <Avatar />
-      </motion.div>
-      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
-        {/* text */}
-        <div className='flex-1 flex flex-col justify-center'>
-          <motion.h2
-            variants={fadeIn('right', 0.2)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='h2'
-          >
-            Captivating <span className='text-accent'>stories</span> birth
-            magnificent designs.
-          </motion.h2>
-          <motion.p
-            variants={fadeIn('right', 0.4)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
-          >
-            10 years ago, I began freelancing as a developer. Since then, I've
-            done remote work for agencies, counsulted for startups, and
-            collaborated on digital products for business and consumer use.
-          </motion.p>
-          {/* counters */}
-          <motion.div
-            variants={fadeIn('right', 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'
-          >
-            <div className='flex flex-1 xl:gap-x-6'>
-              {/* experience */}
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={10} duration={5} /> +
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Years of experience
-                </div>
+
+    <div className='bg-gradient-radial-a h-full'>
+      <section className="">
+        <div className='flex flex-row'>
+          <div className='w-[45%] pt-[12vh] px-[9vh]'>
+            <motion.h1 className="text-[9vh]"
+              variants={fadeIn('down', 0.3)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+            >
+              Nuestra Historia
+            </motion.h1>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 100 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+              <p className="pr-[3vw] leading-5 text-[110%]">
+                Con una trayectoria de más de cuatro décadas, hemos acumulado un profundo entendimiento de los desafíos y las demandas únicas que enfrentan nuestros clientes en diferentes sectores industriales. Esta experiencia nos permite abordar cada proyecto con perspicacia y ofrecer soluciones que realmente marcan la diferencia.
+              </p>
+              <p className="pt-[3vh] pr-[3vw] leading-5 text-[110%]">
+                En MATEC, no solo nos esforzamos por resolver los desafíos logísticos y de intralogística que enfrentan nuestros clientes, sino que también nos comprometemos a ayudarles a alcanzar sus metas y superar sus expectativas. Creemos que una colaboración sólida y un enfoque personalizado son la clave para el éxito. Es por eso que cada proyecto es una oportunidad para nosotros de ofrecer un servicio excepcional y de construir relaciones duraderas con nuestros clientes.
+              </p>
+            </motion.div>
+          </div>
+          <motion.div className="pt-[5vh] pl-[3vw]"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 100 }}
+            transition={{ duration: 1, ease: "easeOut" }}>
+            <Image
+              src="/images/about/web01.png"
+              width={550}
+              height={550}
+
+            />
+          </motion.div>
+        </div>
+      </section>
+      <section className="section2 min-h-screen">
+        <div className='flex flex-row'>
+          <div className="pt-[5vh] pl-[3vw] transform -translate-x-[20]" id="image-container-web02">
+            <Image
+              src="/images/about/web02.png"
+              width={550}
+              height={550}
+
+            />
+          </div>
+          <div className='w-[45%] pt-[12vh] px-[9vh] flex items-center'>
+            <div>
+              <h1 className="text-[9vh] transform -translate-y-20" id="title2">
+                Sobre Nosotros
+              </h1>
+              <p className="leading-5 text-[110%] transform translate-y-10 opacity-0" id="desc2">
+                En MATEC, la intralogística es más que un negocio; es nuestra pasión y nuestro compromiso. Desde nuestra fundación hace más de cuatro décadas, nos hemos esforzado por ser la compañía de referencia en el mundo de la intralogística, marcando la diferencia a través de nuestra dedicación a la ingeniería, el conocimiento profundo de la industria y la cercanía inquebrantable con nuestros valiosos clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#003b71] section3">
+        <div className="bg-white rounded-3xl p-5">
+          <div className="bg-[#003b71] rounded-3xl">
+            <div className='flex flex-row'>
+              <div className="pt-[5vh] pl-[3vw] transform -translate-x-[20]" id="image-container-web03">
+                <Image
+                  src="/images/about/web04.png"
+                  width={550}
+                  height={550}
+
+                />
               </div>
-              {/* clients */}
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={250} duration={5} /> +
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Satisfied clients
-                </div>
-              </div>
-              {/* projects */}
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={650} duration={5} /> +
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Finished projects
-                </div>
-              </div>
-              {/* awards */}
-              <div className='relative flex-1'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={8} duration={5} /> +
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Winning awards
+              <div className='w-[45%] pt-[12vh] px-[9vh] flex items-center'>
+                <div>
+                  <h1 className="text-[9vh] leading-[10vh] opacity-0" id="title3">
+                    Suscríbete A Nuestro Boletín
+                  </h1>
+                  <p className="leading-7 text-[3.5vh] mt-3 opacity-0" id="desc3">
+                    Puedes suscribirte a nuestro boletín  y recibir las últimas novedades
+                  </p>
+                  <div className="bg-white rounded-xl h-[9vh] flex items-center justify-between px-4 mt-7 opacity-0" id="container3">
+                    <div className="w-[15%] p-2">
+                      <LuMailOpen className="text-black w-full h-full" />
+                    </div>
+                    <input className="text-black focus:outline-none caret-black w-full"
+                      placeholder="EMAIL ADDRESS">
+                    </input>
+                    <button className="bg-[#003b71] text-white px-4 py-2 rounded-md text-[3vh] bold-text">SUSCRIBIRSE</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-        {/* info */}
-        <motion.div
-          variants={fadeIn('left', 0.4)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
-        >
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
-            {aboutData.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className={`${
-                    index === itemIndex &&
-                    'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                  }  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                  onClick={() => setIndex(itemIndex)}
-                >
-                  {item.title}
-                </div>
-              );
-            })}
-          </div>
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'
-                >
-                  {/* title */}
-                  <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-                  <div className='hidden md:flex'>-</div>
-                  <div>{item.stage}</div>
-                  <div className='flex gap-x-4'>
-                    {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white'>{icon}</div>;
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </motion.div>
-      </div>
+      </section>
     </div>
   );
 };
