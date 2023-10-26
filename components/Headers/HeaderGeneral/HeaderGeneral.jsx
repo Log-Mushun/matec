@@ -15,13 +15,7 @@ export default function HeaderGeneral() {
 
     return (
         <div className={styles.header} >
-            {/* <div className={styles.bar} >
-                <div onClick={() => {setIsActive(!isActive)}} className={styles.el}>
-                    <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-        
-                </div>
-               
-            </div> */}
+
             <motion.div 
             
             variants={background} initial="initial" animate={menuOpen ? "open" : "closed"} className={styles.background}></motion.div>

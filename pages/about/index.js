@@ -49,8 +49,8 @@ const About = () => {
       delay: 1,
       scrollTrigger: {
         trigger: '.section2',
-        start: 'top bottom', 
-        end: 'top top', 
+        start: 'top bottom',
+        end: 'top top',
         scrub: 2,
       }
     })
@@ -59,8 +59,8 @@ const About = () => {
       delay: 1,
       scrollTrigger: {
         trigger: '.section3',
-        start: 'top-=200 top', 
-        end: 50, 
+        start: 'top-=200 top',
+        end: 50,
         scrub: 2,
       }
     })
@@ -71,7 +71,7 @@ const About = () => {
       scrollTrigger: {
         trigger: '.section2',
         start: 'top bottom',
-        end: 'top top', 
+        end: 'top top',
         scrub: 2,
       }
     })
@@ -80,8 +80,8 @@ const About = () => {
       delay: 1,
       scrollTrigger: {
         trigger: '.section3',
-        start: 'top-=150 top', 
-        end: 50, 
+        start: 'top-=150 top',
+        end: 50,
         scrub: 2,
       }
     })
@@ -91,22 +91,31 @@ const About = () => {
       delay: 3,
       scrollTrigger: {
         trigger: '.section3',
-        start: 'top-=100 top', 
-        end: 90, 
+        start: 'top-=100 top',
+        end: 90,
         scrub: 5,
       }
     })
 
-    
+
 
   }
 
   return (
 
     <div className='bg-gradient-radial-a h-full'>
-      <section className="">
-        <div className='flex flex-row'>
-          <div className='w-[45%] pt-[12vh] px-[9vh]'>
+      <section className="min-h-screen h-full">
+        <div className='flex flex-row relative'>
+          <video
+            autoPlay
+            loop
+            muted
+            className="z-[1] h-screen object-fill absolute opacity-70"
+          >
+            <source src='/videos/blanco.mp4' type="video/mp4" />
+            Tu navegador no soporta la reproducción de videos.
+          </video>
+          <div className='w-[45%] pt-[12vh] px-[9vh] z-10'>
             <motion.h1 className="text-[9vh]"
               variants={fadeIn('down', 0.3)}
               initial='hidden'
@@ -128,8 +137,9 @@ const About = () => {
                 En MATEC, no solo nos esforzamos por resolver los desafíos logísticos y de intralogística que enfrentan nuestros clientes, sino que también nos comprometemos a ayudarles a alcanzar sus metas y superar sus expectativas. Creemos que una colaboración sólida y un enfoque personalizado son la clave para el éxito. Es por eso que cada proyecto es una oportunidad para nosotros de ofrecer un servicio excepcional y de construir relaciones duraderas con nuestros clientes.
               </p>
             </motion.div>
+
           </div>
-          <motion.div className="pt-[5vh] pl-[3vw]"
+          <motion.div className="pt-[5vh] pl-[3vw] z-10"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100 }}
@@ -144,8 +154,17 @@ const About = () => {
         </div>
       </section>
       <section className="section2 min-h-screen">
+        <video
+          autoPlay
+          loop
+          muted
+          className="z-[1] h-screen object-fill absolute opacity-70"
+        >
+          <source src='/videos/blanco.mp4' type="video/mp4" />
+          Tu navegador no soporta la reproducción de videos.
+        </video>
         <div className='flex flex-row'>
-          <div className="pt-[5vh] pl-[3vw] transform -translate-x-[20]" id="image-container-web02">
+          <div className="pt-[5vh] pl-[3vw] transform -translate-x-[20] z-10" id="image-container-web02">
             <Image
               src="/images/about/web02.png"
               width={550}
@@ -153,7 +172,7 @@ const About = () => {
 
             />
           </div>
-          <div className='w-[45%] pt-[12vh] px-[9vh] flex items-center'>
+          <div className='w-[45%] pt-[12vh] px-[9vh] flex items-center z-10'>
             <div>
               <h1 className="text-[9vh] transform -translate-y-20" id="title2">
                 Sobre Nosotros

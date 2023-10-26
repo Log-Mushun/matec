@@ -1,5 +1,6 @@
 import AirportsFooter from "@/components/AirportsFooter";
 import HeaderExperience from "@/components/Headers/HeaderExperience";
+import HeaderGeneral from "@/components/Headers/HeaderGeneral/HeaderGeneral";
 import { MyContextProvider } from "@/MyContextProvider";
 import WebGiViewer from "./WebGiViewer";
 import Plexus from "@/components/Plexus";
@@ -11,6 +12,7 @@ const ExperienceLayout = ({ children }) => {
                 className={'text-white relative'}
             >
                 <HeaderExperience/>
+                <HeaderGeneral/>
                 {children}
                 <AirportsFooter />
             </div>
