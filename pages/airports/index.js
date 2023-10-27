@@ -81,7 +81,7 @@ export default function Airports() {
 
         {/* <HeaderExperience />
         <AirportsFooter /> */}
-        <section data-scroll-section className="panel ">
+        <section className="panel">
           <AirportsComp />
         </section>
         <section className="panel " data-scroll-section>

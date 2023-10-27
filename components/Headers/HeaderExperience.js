@@ -5,7 +5,9 @@ import LogoDarkComp from '../LogoDarkComp';
 import { FaBars } from 'react-icons/fa';
 import styles from './HeaderGeneral/style.module.scss';
 import { useContext, useState, useEffect } from 'react';
+import { AiOutlineClose } from 'react-icons/ai'
 import { MyContext } from '../../MyContextProvider';
+import { motion } from 'framer-motion';
 
 const HeaderExperience = () => {
   const { menuOpen, setMenuOpen } = useContext(MyContext);
@@ -29,8 +31,9 @@ const HeaderExperience = () => {
     <header className='fixed w-full backdrop-blur' style={{zIndex:200}} id="header-experience">
       <div className='container mx-auto pt-4 xl:pt-4 pr-4'>
         <div className='flex items-center justify-between'>
-          <LogoDarkComp />
-          <FaBars className='h-8 w-8' onClick={() => setMenuOpen(!menuOpen)} />
+        <LogoDarkComp />
+        <FaBars className='h-8 w-8' onClick={() => setMenuOpen(!menuOpen)} />
+
         </div>
       </div>
     </header>

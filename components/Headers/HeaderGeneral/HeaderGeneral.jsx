@@ -16,8 +16,7 @@ export default function HeaderGeneral() {
     return (
         <div className={styles.header} >
 
-            <motion.div 
-            
+            <motion.div             
             variants={background} initial="initial" animate={menuOpen ? "open" : "closed"} className={styles.background}></motion.div>
             <AnimatePresence mode="wait">
                 {menuOpen && <Nav/>}

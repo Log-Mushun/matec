@@ -115,7 +115,7 @@ const About = () => {
             <source src='/videos/blanco.mp4' type="video/mp4" />
             Tu navegador no soporta la reproducción de videos.
           </video>
-          <div className='w-[45%] pt-[12vh] px-[9vh] z-10'>
+          <div className='w-[45%] pt-[12vh] px-[9vh] z-10 bg-[#121521] bg-opacity-70'>
             <motion.h1 className="text-[9vh]"
               variants={fadeIn('down', 0.3)}
               initial='hidden'
@@ -172,7 +172,7 @@ const About = () => {
 
             />
           </div>
-          <div className='w-[45%] pt-[12vh] px-[9vh] flex items-center z-10'>
+          <div className='w-[45%] pt-[12vh] px-[9vh] flex items-center z-10 bg-[#121521] bg-opacity-70'>
             <div>
               <h1 className="text-[9vh] transform -translate-y-20" id="title2">
                 Sobre Nosotros
