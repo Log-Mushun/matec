@@ -32,8 +32,7 @@ const HeaderExperience = () => {
       <div className='container mx-auto pt-4 xl:pt-4 pr-4'>
         <div className='flex items-center justify-between'>
         <LogoDarkComp />
-        <FaBars className='h-8 w-8' onClick={() => setMenuOpen(!menuOpen)} />
-
+        <FaBars className='h-8 w-8 cursor-pointer' onClick={() => setMenuOpen(!menuOpen)} />
         </div>
       </div>
     </header>

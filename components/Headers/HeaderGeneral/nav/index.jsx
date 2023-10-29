@@ -11,7 +11,7 @@ import { MyContext } from '@/MyContextProvider';
 
 const links = [
   {
-    title: "Start",
+    title: "Start Page",
     href: "/",
     src: "drivers/driver1.png"
   },
@@ -22,27 +22,27 @@ const links = [
   },
   {
     title: "Airport Safety",
-    href: "#",
+    href: "#airport-safety",
     src: "drivers/driver3.png"
   },
   {
     title: "BHS Control Center",
-    href: "#",
+    href: "#bhs",
     src: "drivers/driver1.png"
   },
   {
     title: "Inspection Zone",
-    href: "#",
+    href: "#inspection-zone",
     src: "drivers/driver1.png"
   },
   {
     title: "Check Out",
-    href: "#",
+    href: "#check-out",
     src: "drivers/driver1.png"
   },
   {
     title: "Guardian Angel",
-    href: "#",
+    href: "#guardian",
     src: "drivers/driver1.png"
   },
   {

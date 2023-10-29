@@ -5,14 +5,11 @@
 
 
    .wrapper{
-        display: flex;
         height: 100%;
     }
 
     .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+
         height: 100%;
     }
 }
@@ -20,7 +17,7 @@
 @media only screen and (min-width: 1000px) {
     .nav{
         .wrapper{
-            justify-content: space-between;
+          text-align: center;
             
         }
     }

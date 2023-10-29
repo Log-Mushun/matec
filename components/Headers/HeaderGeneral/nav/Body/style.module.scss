@@ -3,18 +3,14 @@
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    white-space: wrap;
     a{
         color: white;
-        text-decoration: none;
     }
 
     p{
-        margin: 0px;
-        display: flex;
-        overflow: hidden;
-        font-size: 10px;
-        font-weight: 300;
+        font-size: 3vh;
     }
 }
 
@@ -25,7 +21,6 @@
 
         p{
             font-size: 3vw;
-            padding-left: 4vw;
         }
     }
 }

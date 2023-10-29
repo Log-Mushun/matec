@@ -3,11 +3,10 @@
     width: 100%;
     z-index: 200;
     box-sizing: border-box;
-    background-position: center center; /* Centra la imagen de fondo horizontal y verticalmente */
+    background-position: center center;
 
     .background{
-        background-color: rgb(255, 255, 255);
-        opacity: 0.5;
+
         height: 100%;
         width: 100%;
         position: absolute;

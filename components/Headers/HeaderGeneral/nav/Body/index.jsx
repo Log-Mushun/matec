@@ -30,7 +30,7 @@ export default function Body({ links, selectedLink, setSelectedLink }) {
                     links.map((link, index) => {
                         const { title, href } = link;
                         return <Link key={`l_${index}`} href={href}>
-                            <motion.p >
+                            <motion.p whileHover={{ scale: 1.2 }}>
                                 {getChars(title)}
                             </motion.p>
                         </Link>

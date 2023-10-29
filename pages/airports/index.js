@@ -103,7 +103,7 @@ export default function Airports() {
         <div>
           <DispelModel />
         </div>
-        <section className="panel  ">
+        <section className="panel">
           <SlidableController>
             <DriverInsights />
             {/* <PlusButton number={2}
@@ -121,7 +121,7 @@ export default function Airports() {
           </SlidableController>
         </section>
 
-        <section className="panel">
+        <section className="panel" id="bhs">
           <SlidableController>
             <div className="bhs relative">
 
@@ -148,10 +148,10 @@ export default function Airports() {
             </div>
           </SlidableController>
         </section>
-        <section className="panel  ">
+        <section className="panel" id="inspection-zone">
           <DriverOneFunctions />
         </section>
-        <section className="panel  ">
+        <section className="panel" id="check-out">
           <SlidableController>
             <Closing />
             <PlusButton number={4}
@@ -179,7 +179,7 @@ export default function Airports() {
           </SlidableController>
           {/* <ModelsInteractive /> */}
         </section>
-        <section className="panel mt-20">
+        <section className="panel mt-20" id="guardian">
           <GuardianConcept />
         </section>
         <section className="panel ">

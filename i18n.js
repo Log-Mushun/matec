@@ -442,6 +442,10 @@ fr: {
 
       "closing-title-slidable":"Conjunto de soluciones del BHS de llegadas",
 
+      "menu-start-text": "Página de inicio",
+      "menu-start-text": "Check In",
+      
+
     }
   }
 };
