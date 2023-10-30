@@ -8,51 +8,55 @@ import Footer from './Footer';
 import Image from './Image';
 import { AiOutlineClose } from 'react-icons/ai'
 import { MyContext } from '@/MyContextProvider';
+import { I18nextProvider, useTranslation } from "react-i18next";
+import { i18n as i18nfile } from "@/i18n";
 
-const links = [
-  {
-    title: "Start Page",
-    href: "/",
-    src: "drivers/driver1.png"
-  },
-  {
-    title: "Check In",
-    href: "#check-in",
-    src: "drivers/driver2.png"
-  },
-  {
-    title: "Airport Safety",
-    href: "#airport-safety",
-    src: "drivers/driver3.png"
-  },
-  {
-    title: "BHS Control Center",
-    href: "#bhs",
-    src: "drivers/driver1.png"
-  },
-  {
-    title: "Inspection Zone",
-    href: "#inspection-zone",
-    src: "drivers/driver1.png"
-  },
-  {
-    title: "Check Out",
-    href: "#check-out",
-    src: "drivers/driver1.png"
-  },
-  {
-    title: "Guardian Angel",
-    href: "#guardian",
-    src: "drivers/driver1.png"
-  },
-  {
-    title: "About",
-    href: "/about",
-    src: "drivers/driver1.png"
-  },
-]
 
 export default function Index() {
+  const { t, i18n } = useTranslation();
+
+  const links = [
+    {
+      title: t('menu-start-text'),
+      href: "/",
+      src: "drivers/driver1.png"
+    },
+    {
+      title: t('menu-checkin-text'),
+      href: "#check-in",
+      src: "drivers/driver2.png"
+    },
+    {
+      title: t('airport-driver2-title-safety'),
+      href: "#airport-safety",
+      src: "drivers/driver3.png"
+    },
+    {
+      title: t('airport-slidable-title3'),
+      href: "#bhs",
+      src: "drivers/driver1.png"
+    },
+    {
+      title: t('menu-inspection-text'),
+      href: "#inspection-zone",
+      src: "drivers/driver1.png"
+    },
+    {
+      title: t('menu-checkout-text'),
+      href: "#check-out",
+      src: "drivers/driver1.png"
+    },
+    {
+      title: t('menu-guardian-text'),
+      href: "#guardian",
+      src: "drivers/driver1.png"
+    },
+    {
+      title: t('Acerca de Nosotros'),
+      href: "/about",
+      src: "drivers/driver1.png"
+    },
+  ]
 
   const { menuOpen, setMenuOpen } = useContext(MyContext);
   const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 });
